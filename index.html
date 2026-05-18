@@ -3,34 +3,56 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
 <title>MUSES OF BEAUTY | Brow Bar & Academy</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
+
 :root{
   --bg:#eee9e1;
   --cream:#f8f5ef;
   --text:#171717;
   --muted:#756f66;
-  --amber:#c47a3d;
-  --gold:#c47a3d;
+  --amber:#ff8a2a;
   --line:#d8d0c5;
   --dark:#161616;
-  --white:#fff;
+  --white:#ffffff;
 }
 
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
 body{
   font-family:'Inter',sans-serif;
   background:var(--bg);
   color:var(--text);
   overflow-x:hidden;
 }
-a{text-decoration:none;color:inherit}
-img{width:100%;display:block;object-fit:cover}
-.container{width:min(1180px,92%);margin:auto}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+img{
+  width:100%;
+  display:block;
+  object-fit:cover;
+}
+
+.container{
+  width:min(1180px,92%);
+  margin:auto;
+}
 
 /* NAV */
 
@@ -40,24 +62,30 @@ nav{
   left:50%;
   transform:translateX(-50%);
   width:min(1180px,92%);
-  z-index:50;
+  z-index:100;
+
   display:flex;
   justify-content:space-between;
   align-items:center;
+
   padding:14px 22px;
+
   border-radius:999px;
-  background:rgba(248,245,239,.72);
+
+  background:rgba(255,255,255,.56);
+
   backdrop-filter:blur(18px);
-  border:1px solid rgba(255,255,255,.6);
-  box-shadow:0 12px 40px rgba(0,0,0,.05);
+
+  border:1px solid rgba(255,255,255,.7);
+
+  box-shadow:0 10px 40px rgba(0,0,0,.04);
 }
 
 .logo{
   font-family:'Cormorant Garamond',serif;
-  font-size:1.8rem;
-  letter-spacing:-.04em;
+  font-size:1.9rem;
+  letter-spacing:-0.04em;
   font-weight:600;
-  white-space:nowrap;
 }
 
 .logo em{
@@ -68,44 +96,70 @@ nav{
 .nav-links{
   display:flex;
   gap:34px;
-  font-size:.85rem;
-  letter-spacing:.08em;
-  font-weight:600;
+
+  font-size:.84rem;
+  letter-spacing:.12em;
+  font-weight:700;
 }
 
 .nav-btn{
+  border:1px solid var(--amber);
+  color:var(--text);
+
+  padding:11px 18px;
+
+  border-radius:999px;
+
+  font-size:.84rem;
+  font-weight:700;
+
+  transition:.3s;
+}
+
+.nav-btn:hover{
   background:var(--amber);
   color:white;
-  padding:11px 20px;
-  border-radius:999px;
-  font-size:.86rem;
-  font-weight:700;
 }
 
 /* HERO */
 
 .hero{
   min-height:100svh;
+
   position:relative;
+
   display:flex;
   align-items:center;
+
   overflow:hidden;
-  padding:130px 0 70px;
+
+  padding:140px 0 70px;
 }
 
 .hero .container{
-  width:min(1280px,96%);
+  width:min(1400px,98%);
+  margin-left:0;
+  padding-left:clamp(18px,4vw,80px);
 }
 
 .hero::before{
   content:"";
   position:absolute;
   inset:0;
+
   background:
-    linear-gradient(90deg, rgba(238,233,225,.98) 0%, rgba(238,233,225,.80) 34%, rgba(238,233,225,.30) 100%),
-    url("letrero_muses.png");
+  linear-gradient(
+  90deg,
+  rgba(238,233,225,.99) 0%,
+  rgba(238,233,225,.94) 26%,
+  rgba(238,233,225,.50) 48%,
+  rgba(238,233,225,.08) 100%
+  ),
+  url("letrero_muses.png");
+
   background-size:cover;
-  background-position:65% center;
+  background-position:78% center;
+
   transform:scale(1.02);
 }
 
@@ -113,27 +167,34 @@ nav{
   content:"";
   position:absolute;
   inset:auto 0 0 0;
-  height:38%;
+
+  height:36%;
+
   background:linear-gradient(to bottom, transparent, var(--bg));
 }
 
 .hero-content{
   position:relative;
   z-index:2;
-  max-width:760px;
-  margin-left:0;
+
+  max-width:620px;
 }
 
 .kicker{
   display:inline-flex;
   align-items:center;
   gap:12px;
-  color:var(--muted);
-  text-transform:uppercase;
-  letter-spacing:.14em;
-  font-size:.78rem;
-  font-weight:700;
+
   margin-bottom:28px;
+
+  color:var(--muted);
+
+  text-transform:uppercase;
+
+  letter-spacing:.14em;
+
+  font-size:.76rem;
+  font-weight:700;
 }
 
 .kicker::before{
@@ -145,8 +206,11 @@ nav{
 
 .hero h1{
   font-size:clamp(4.2rem,10vw,9rem);
-  line-height:.86;
+
+  line-height:.84;
+
   letter-spacing:-.08em;
+
   margin-bottom:30px;
 }
 
@@ -157,11 +221,15 @@ nav{
 }
 
 .hero p{
-  max-width:620px;
   color:var(--muted);
-  font-size:1.08rem;
+
   line-height:1.8;
+
+  font-size:1.06rem;
+
   margin-bottom:38px;
+
+  max-width:560px;
 }
 
 .hero-actions{
@@ -174,23 +242,27 @@ nav{
   display:inline-flex;
   align-items:center;
   justify-content:center;
+
   gap:10px;
-  padding:15px 25px;
+
+  padding:15px 24px;
+
   border-radius:999px;
+
   font-weight:700;
-  transition:.3s ease;
-  border:none;
-  cursor:pointer;
+
+  transition:.3s;
 }
 
 .btn-dark{
-  background:var(--amber);
+  background:#161616;
   color:white;
+  border:1px solid #161616;
 }
 
 .btn-light{
-  background:rgba(255,255,255,.58);
-  border:1px solid rgba(0,0,0,.08);
+  background:rgba(255,255,255,.55);
+  border:1px solid var(--amber);
 }
 
 .btn:hover{
@@ -209,24 +281,32 @@ nav{
 
 .label{
   text-transform:uppercase;
+
   color:var(--amber);
+
   letter-spacing:.14em;
-  font-size:.78rem;
+
+  font-size:.76rem;
   font-weight:800;
+
   margin-bottom:18px;
 }
 
 .title{
-  font-size:clamp(2.7rem,6vw,6.5rem);
-  line-height:.93;
+  font-size:clamp(2.8rem,6vw,6rem);
+
+  line-height:.92;
+
   letter-spacing:-.075em;
+
   margin-bottom:24px;
 }
 
 .description{
   color:var(--muted);
+
   line-height:1.8;
-  font-size:1.05rem;
+
   max-width:760px;
 }
 
@@ -240,15 +320,26 @@ nav{
 
 .service-card{
   background:rgba(255,255,255,.64);
+
   border:1px solid var(--line);
+
   border-radius:36px;
+
   overflow:hidden;
-  box-shadow:0 20px 60px rgba(0,0,0,.04);
+
+  transition:.35s;
+}
+
+.service-card:hover{
+  border-color:var(--amber);
+
+  transform:translateY(-6px);
+
+  box-shadow:0 20px 60px rgba(0,0,0,.06);
 }
 
 .service-img{
   height:430px;
-  background:#ddd;
 }
 
 .service-img img{
@@ -263,42 +354,49 @@ nav{
   display:flex;
   justify-content:space-between;
   gap:20px;
-  align-items:flex-start;
+
   margin-bottom:18px;
 }
 
 .service-body h3{
   font-size:2rem;
-  letter-spacing:-.055em;
+  letter-spacing:-.05em;
 }
 
 .badge{
-  white-space:nowrap;
-  background:var(--cream);
   border:1px solid var(--line);
-  padding:9px 14px;
+
+  background:var(--cream);
+
+  padding:8px 14px;
+
   border-radius:999px;
-  font-size:.78rem;
+
+  font-size:.75rem;
+
   color:var(--muted);
+
   font-weight:700;
 }
 
 .service-body p{
   color:var(--muted);
+
   line-height:1.75;
-  margin-bottom:26px;
+
+  margin-bottom:24px;
 }
 
 .price{
-  font-size:1.35rem;
+  font-size:1.3rem;
   font-weight:800;
-  color:var(--amber);
 }
 
-/* MINI SERVICES */
+/* MINI */
 
 .mini-grid{
   margin-top:24px;
+
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:18px;
@@ -306,29 +404,43 @@ nav{
 
 .mini-card{
   background:rgba(255,255,255,.54);
+
   border:1px solid var(--line);
+
   border-radius:28px;
+
   padding:28px;
+
+  transition:.3s;
+}
+
+.mini-card:hover{
+  border-color:var(--amber);
 }
 
 .mini-card h3{
-  font-size:1.25rem;
+  font-size:1.2rem;
+
   margin-bottom:12px;
-  letter-spacing:-.04em;
 }
 
 .mini-card p{
   color:var(--muted);
-  line-height:1.65;
+
+  line-height:1.7;
+
   margin-bottom:20px;
 }
 
 /* ACADEMY */
 
 .academy{
-  background:var(--dark);
+  background:#171717;
+
   color:white;
-  border-radius:60px;
+
+  border-radius:58px;
+
   overflow:hidden;
 }
 
@@ -337,31 +449,43 @@ nav{
 }
 
 .academy .description{
-  color:rgba(255,255,255,.7);
+  color:rgba(255,255,255,.72);
 }
 
 .academy-grid{
+  margin-top:48px;
+
   display:grid;
   grid-template-columns:repeat(2,1fr);
   gap:22px;
-  margin-top:48px;
 }
 
 .academy-card{
   padding:36px;
+
   border-radius:32px;
-  background:rgba(255,255,255,.06);
-  border:1px solid rgba(255,255,255,.1);
+
+  background:rgba(255,255,255,.05);
+
+  border:1px solid rgba(255,255,255,.08);
+
+  transition:.3s;
+}
+
+.academy-card:hover{
+  border-color:var(--amber);
 }
 
 .academy-card h3{
   font-size:1.7rem;
+
   margin-bottom:16px;
 }
 
 .academy-card p,
 .academy-card li{
   color:rgba(255,255,255,.72);
+
   line-height:1.8;
 }
 
@@ -378,23 +502,33 @@ nav{
 
 .cta-box{
   background:white;
+
   border-radius:52px;
+
   border:1px solid var(--line);
+
   padding:80px 30px;
+
   box-shadow:0 24px 70px rgba(0,0,0,.05);
 }
 
 .cta h2{
   font-size:clamp(3rem,7vw,7rem);
+
   line-height:.9;
+
   letter-spacing:-.08em;
+
   margin-bottom:24px;
 }
 
 .cta p{
   color:var(--muted);
-  max-width:680px;
+
   line-height:1.8;
+
+  max-width:680px;
+
   margin:0 auto 34px;
 }
 
@@ -407,6 +541,7 @@ nav{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:14px;
+
   margin-bottom:14px;
 }
 
@@ -414,18 +549,27 @@ nav{
 .reserve-form select,
 .reserve-form textarea{
   width:100%;
+
   border:1px solid var(--line);
+
   background:var(--cream);
+
   border-radius:18px;
+
   padding:17px 18px;
+
   font-family:'Inter',sans-serif;
+
   font-size:.95rem;
+
   outline:none;
 }
 
 .reserve-form textarea{
   min-height:140px;
+
   resize:vertical;
+
   margin-bottom:20px;
 }
 
@@ -435,79 +579,77 @@ nav{
   border-color:var(--amber);
 }
 
-.reserve-form button{
-  min-width:220px;
-}
-
 /* FOOTER */
 
 footer{
   padding:42px 0;
+
   color:var(--muted);
 }
 
 .footer-grid{
   border-top:1px solid var(--line);
+
   padding-top:28px;
+
   display:flex;
   justify-content:space-between;
-  gap:18px;
   flex-wrap:wrap;
+  gap:18px;
+
   font-size:.92rem;
 }
 
 /* MOBILE */
 
 @media(max-width:900px){
-  nav{
-    top:10px;
-    width:94%;
-    padding:12px 14px;
-  }
 
-  .logo{
-    font-size:1.35rem;
+  nav{
+    width:94%;
+
+    padding:12px 14px;
   }
 
   .nav-links{
     display:none;
   }
 
-  .nav-btn{
-    padding:10px 15px;
-    font-size:.78rem;
+  .logo{
+    font-size:1.4rem;
   }
 
   .hero{
-    min-height:100svh;
-    padding:115px 0 55px;
+    padding:120px 0 55px;
+
     align-items:flex-end;
+  }
+
+  .hero .container{
+    width:92%;
+    margin:auto;
+    padding-left:0;
   }
 
   .hero::before{
     background:
-      linear-gradient(to bottom, rgba(238,233,225,.35) 0%, rgba(238,233,225,.70) 44%, rgba(238,233,225,.98) 84%),
-      url("letrero_muses.png");
+    linear-gradient(
+    to bottom,
+    rgba(238,233,225,.20) 0%,
+    rgba(238,233,225,.62) 40%,
+    rgba(238,233,225,.98) 82%
+    ),
+    url("letrero_muses.png");
+
     background-size:cover;
-    background-position:70% top;
+    background-position:78% top;
   }
 
   .hero-content{
     max-width:100%;
   }
 
-  .kicker{
-    font-size:.68rem;
-    margin-bottom:20px;
-  }
-
   .hero h1{
-    font-size:4.2rem;
-  }
-
-  .hero p{
-    font-size:.98rem;
-    line-height:1.7;
+    font-size:3.8rem;
   }
 
   .hero-actions{
@@ -523,18 +665,14 @@ footer{
   }
 
   .services,
-  .academy-grid,
   .mini-grid,
+  .academy-grid,
   .form-grid{
     grid-template-columns:1fr;
   }
 
-  .service-card{
-    border-radius:28px;
-  }
-
   .service-img{
-    height:330px;
+    height:320px;
   }
 
   .service-body{
@@ -543,10 +681,6 @@ footer{
 
   .service-top{
     flex-direction:column;
-  }
-
-  .service-body h3{
-    font-size:1.65rem;
   }
 
   .academy{
@@ -569,28 +703,19 @@ footer{
   .footer-grid{
     flex-direction:column;
   }
+
 }
 
-@media(max-width:480px){
-  .hero h1{
-    font-size:3.45rem;
-  }
-
-  .title{
-    font-size:2.6rem;
-  }
-
-  .service-img{
-    height:280px;
-  }
-}
 </style>
 </head>
 
 <body>
 
 <nav>
-  <div class="logo">MUSES <em>of</em> BEAUTY</div>
+
+  <div class="logo">
+    MUSES <em>of</em> BEAUTY
+  </div>
 
   <div class="nav-links">
     <a href="#servicios">SERVICIOS</a>
@@ -598,181 +723,359 @@ footer{
     <a href="#reserva">RESERVA</a>
   </div>
 
-  <a class="nav-btn" href="#reserva">RESERVAR</a>
+  <a href="#reserva" class="nav-btn">
+    RESERVAR
+  </a>
+
 </nav>
 
 <header class="hero">
-  <div class="container">
-    <div class="hero-content">
-      <div class="kicker">Brow Bar · Lashes · Micropigmentación</div>
 
-      <h1>MUSES <em>of</em><br>BEAUTY</h1>
+  <div class="container">
+
+    <div class="hero-content">
+
+      <div class="kicker">
+        Brow Bar · Lashes · Micropigmentación
+      </div>
+
+      <h1>
+        MUSES <em>of</em><br>
+        BEAUTY
+      </h1>
 
       <p>
         Clínica estética especializada en micropigmentación natural de cejas,
-        neutralización de ojeras, labios y diseño de mirada. Una experiencia
-        premium, elegante y personalizada.
+        neutralización de ojeras, labios y diseño de mirada.
+        Una experiencia premium, elegante y personalizada.
       </p>
 
       <div class="hero-actions">
-        <a href="#servicios" class="btn btn-dark">Ver tratamientos →</a>
-        <a href="#academy" class="btn btn-light">Talleres y formación</a>
+
+        <a href="#servicios" class="btn btn-dark">
+          Ver tratamientos →
+        </a>
+
+        <a href="#academy" class="btn btn-light">
+          Talleres y formación
+        </a>
+
       </div>
+
     </div>
+
   </div>
+
 </header>
 
 <section class="section" id="servicios">
+
   <div class="container">
+
     <div class="section-head">
-      <div class="label">Signature Treatments</div>
-      <h2 class="title">Tratamientos principales.</h2>
+
+      <div class="label">
+        Signature Treatments
+      </div>
+
+      <h2 class="title">
+        Tratamientos principales.
+      </h2>
+
       <p class="description">
         Servicios pensados para realzar la belleza natural con acabados suaves,
         elegantes y adaptados a cada rostro.
       </p>
+
     </div>
 
     <div class="services">
+
       <article class="service-card">
+
         <div class="service-img">
-          <img src="tratamiento_cejas.png" alt="Tratamiento de cejas en Muses of Beauty">
+          <img src="tratamiento_cejas.png" alt="">
         </div>
+
         <div class="service-body">
+
           <div class="service-top">
-            <h3>Micropigmentación Brows</h3>
-            <div class="badge">3 h</div>
+
+            <h3>
+              Micropigmentación Brows
+            </h3>
+
+            <div class="badge">
+              3 h
+            </div>
+
           </div>
+
           <p>
-            Diseño personalizado de cejas con técnica natural pelo a pelo o combo
-            brows. Ideal para conseguir una ceja definida, elegante y adaptada a tus facciones.
+            Diseño personalizado de cejas con técnica natural pelo a pelo
+            o combo brows para un resultado elegante y sofisticado.
           </p>
-          <div class="price">desde 210 €</div>
+
+          <div class="price">
+            desde 210 €
+          </div>
+
         </div>
+
       </article>
 
       <article class="service-card">
+
         <div class="service-img">
-          <img src="tratamiento_ojeras.png" alt="Tratamiento de ojeras en Muses of Beauty">
+          <img src="tratamiento_ojeras.png" alt="">
         </div>
+
         <div class="service-body">
+
           <div class="service-top">
-            <h3>Neutralización de Ojeras</h3>
-            <div class="badge">2 h</div>
+
+            <h3>
+              Neutralización de Ojeras
+            </h3>
+
+            <div class="badge">
+              2 h
+            </div>
+
           </div>
+
           <p>
-            Tratamiento de dermopigmentación para neutralizar tonos oscuros,
-            aportar luminosidad y mejorar la apariencia de la mirada.
+            Dermopigmentación especializada para iluminar y neutralizar tonos oscuros
+            consiguiendo una mirada más fresca y descansada.
           </p>
-          <div class="price">desde 350 €</div>
+
+          <div class="price">
+            desde 350 €
+          </div>
+
         </div>
+
       </article>
+
     </div>
 
     <div class="mini-grid">
+
       <div class="mini-card">
-        <h3>Lifting de pestañas</h3>
-        <p>Curvatura natural, tinte y efecto mirada abierta.</p>
-        <div class="price">45 €</div>
+
+        <h3>
+          Lifting de pestañas
+        </h3>
+
+        <p>
+          Curvatura natural y efecto mirada abierta.
+        </p>
+
+        <div class="price">
+          45 €
+        </div>
+
       </div>
 
       <div class="mini-card">
-        <h3>Laminado de cejas</h3>
-        <p>Diseño, depilación y laminado para cejas más ordenadas.</p>
-        <div class="price">45 €</div>
+
+        <h3>
+          Laminado de cejas
+        </h3>
+
+        <p>
+          Diseño, depilación y fijación elegante de cejas.
+        </p>
+
+        <div class="price">
+          45 €
+        </div>
+
       </div>
 
       <div class="mini-card">
-        <h3>Labios</h3>
-        <p>Micropigmentación, hidratación y neutralización natural.</p>
-        <div class="price">desde 196 €</div>
+
+        <h3>
+          Labios
+        </h3>
+
+        <p>
+          Micropigmentación y neutralización natural.
+        </p>
+
+        <div class="price">
+          desde 196 €
+        </div>
+
       </div>
+
     </div>
+
   </div>
+
 </section>
 
 <section class="section" id="academy">
+
   <div class="container academy">
+
     <div class="container academy-inner">
+
       <div class="section-head">
-        <div class="label">Muses Academy</div>
-        <h2 class="title">Formación profesional.</h2>
+
+        <div class="label">
+          Muses Academy
+        </div>
+
+        <h2 class="title">
+          Formación profesional.
+        </h2>
+
         <p class="description">
           Talleres y clases de micropigmentación para alumnas que quieren aprender
-          técnica, diseño, visagismo, colorimetría y protocolo profesional.
+          técnica, diseño, visagismo y protocolo profesional.
         </p>
+
       </div>
 
       <div class="academy-grid">
+
         <div class="academy-card">
-          <h3>Private Masterclass</h3>
-          <p>Formación individual para aprender con acompañamiento directo.</p>
+
+          <h3>
+            Private Masterclass
+          </h3>
+
+          <p>
+            Formación individual intensiva con acompañamiento personalizado.
+          </p>
+
           <ul>
             <li>Diseño de cejas y visagismo</li>
             <li>Técnica Hair Stroke</li>
-            <li>Colorimetría y pigmentos</li>
-            <li>Protocolo profesional de trabajo</li>
+            <li>Colorimetría</li>
+            <li>Protocolo profesional</li>
           </ul>
-          <a href="#reserva" class="btn btn-light">Reserva ya tu plaza</a>
+
+          <a href="#reserva" class="btn btn-light">
+            Reserva ya tu plaza
+          </a>
+
         </div>
 
         <div class="academy-card">
-          <h3>Workshops intensivos</h3>
-          <p>Clases prácticas para iniciarse o perfeccionar técnica.</p>
+
+          <h3>
+            Workshops intensivos
+          </h3>
+
+          <p>
+            Clases prácticas para iniciarse o perfeccionar técnica.
+          </p>
+
           <ul>
             <li>Teoría + práctica guiada</li>
             <li>Material de apoyo</li>
             <li>Demostración técnica</li>
             <li>Orientación para captar clientas</li>
           </ul>
-          <a href="#reserva" class="btn btn-light">Reserva ya tu plaza</a>
+
+          <a href="#reserva" class="btn btn-light">
+            Reserva ya tu plaza
+          </a>
+
         </div>
+
       </div>
+
     </div>
+
   </div>
+
 </section>
 
 <section class="section cta" id="reserva">
+
   <div class="container">
+
     <div class="cta-box">
-      <h2>Reserva tu cita.</h2>
+
+      <h2>
+        Reserva tu cita.
+      </h2>
+
       <p>
         Déjanos tus datos y cuéntanos qué tratamiento o formación te interesa.
       </p>
 
-      <form action="https://formspree.io/f/tu-id" method="POST" class="reserve-form">
+      <form class="reserve-form">
+
         <div class="form-grid">
-          <input type="text" name="nombre" placeholder="Nombre completo" required>
-          <input type="tel" name="telefono" placeholder="Teléfono / WhatsApp" required>
-          <input type="email" name="email" placeholder="Email">
-          <select name="servicio" required>
-            <option value="">Selecciona servicio</option>
-            <option>Micropigmentación de cejas</option>
-            <option>Neutralización de ojeras</option>
-            <option>Labios</option>
-            <option>Lifting de pestañas</option>
-            <option>Laminado de cejas</option>
-            <option>Formación / Masterclass</option>
-            <option>Workshop intensivo</option>
+
+          <input type="text" placeholder="Nombre completo" required>
+
+          <input type="tel" placeholder="Teléfono / WhatsApp" required>
+
+          <input type="email" placeholder="Email">
+
+          <select required>
+            <option value="">
+              Selecciona servicio
+            </option>
+            <option>
+              Micropigmentación de cejas
+            </option>
+            <option>
+              Neutralización de ojeras
+            </option>
+            <option>
+              Labios
+            </option>
+            <option>
+              Lifting de pestañas
+            </option>
+            <option>
+              Laminado de cejas
+            </option>
+            <option>
+              Formación / Masterclass
+            </option>
           </select>
+
         </div>
 
-        <textarea name="mensaje" placeholder="Cuéntanos brevemente tu caso o disponibilidad"></textarea>
+        <textarea placeholder="Cuéntanos brevemente tu caso o disponibilidad"></textarea>
 
         <button type="submit" class="btn btn-dark">
           Enviar solicitud →
         </button>
+
       </form>
+
     </div>
+
   </div>
+
 </section>
 
 <footer>
+
   <div class="container footer-grid">
-    <div>© 2026 MUSES OF BEAUTY</div>
-    <div>Brow Bar · Lashes · Micropigmentación</div>
-    <div>Designed by KumCode Studio</div>
+
+    <div>
+      © 2026 MUSES OF BEAUTY
+    </div>
+
+    <div>
+      Brow Bar · Lashes · Micropigmentación
+    </div>
+
+    <div>
+      Designed by KumCode Studio
+    </div>
+
   </div>
+
 </footer>
 
 </body>
