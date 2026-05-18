@@ -1,736 +1,846 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Muses of Beauty | Brow Bar & Micropigmentación</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <style>
-    :root {
-      --bg: #f3f1ee;
-      --soft: #e8e3dc;
-      --text: #171b29;
-      --muted: #6b6f7a;
-      --white: #ffffff;
-      --line: #d8d2c8;
-      --accent: #b99b72;
-      --dark: #111421;
-      --radius: 28px;
+<title>MUSES OF BEAUTY — Brow Bar & Academy</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+    --bg:#ece7df;
+    --cream:#f5f2ed;
+    --text:#171717;
+    --muted:#726d66;
+    --gold:#b8a58b;
+    --line:#d8d1c7;
+    --white:#ffffff;
+    --radius:30px;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Inter',sans-serif;
+    overflow-x:hidden;
+}
+
+img{
+    width:100%;
+    display:block;
+    object-fit:cover;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+.container{
+    width:min(1220px,92%);
+    margin:auto;
+}
+
+/* NAV */
+
+nav{
+    position:fixed;
+    top:18px;
+    left:50%;
+    transform:translateX(-50%);
+    width:min(1220px,92%);
+    z-index:100;
+    
+    backdrop-filter:blur(18px);
+
+    background:rgba(255,255,255,0.42);
+
+    border:1px solid rgba(255,255,255,0.4);
+
+    border-radius:999px;
+
+    padding:16px 26px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    font-family:'Cormorant Garamond',serif;
+    font-size:2rem;
+    letter-spacing:-0.04em;
+    font-weight:600;
+}
+
+.logo span{
+    font-style:italic;
+    font-weight:400;
+}
+
+.nav-links{
+    display:flex;
+    gap:42px;
+    font-size:0.92rem;
+    letter-spacing:0.04em;
+}
+
+.nav-btn{
+    padding:12px 22px;
+    background:#fff;
+    border-radius:999px;
+    font-size:0.92rem;
+    font-weight:600;
+}
+
+/* HERO */
+
+.hero{
+    min-height:100vh;
+    position:relative;
+    overflow:hidden;
+    display:flex;
+    align-items:center;
+}
+
+/* Fondo */
+
+.hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+
+    background:
+    linear-gradient(to bottom,
+    rgba(236,231,223,0.78),
+    rgba(236,231,223,0.90)),
+    url("letrero_muses.png");
+
+    background-size:cover;
+    background-position:center;
+
+    opacity:1;
+}
+
+.hero-grid{
+    position:relative;
+    z-index:2;
+
+    width:100%;
+
+    display:grid;
+    grid-template-columns:1.05fr 0.95fr;
+    align-items:center;
+    gap:60px;
+}
+
+.hero-left{
+    padding-top:90px;
+}
+
+.hero-tag{
+    display:inline-flex;
+    align-items:center;
+    gap:12px;
+
+    margin-bottom:26px;
+
+    color:var(--muted);
+
+    text-transform:uppercase;
+    letter-spacing:0.12em;
+
+    font-size:0.82rem;
+}
+
+.hero-tag::before{
+    content:"";
+    width:42px;
+    height:1px;
+    background:var(--gold);
+}
+
+.hero h1{
+    font-size:clamp(4.5rem,9vw,9rem);
+
+    line-height:0.88;
+
+    letter-spacing:-0.08em;
+
+    font-weight:700;
+
+    margin-bottom:30px;
+}
+
+.hero h1 span{
+    font-family:'Cormorant Garamond',serif;
+    font-style:italic;
+    font-weight:400;
+}
+
+.hero p{
+    max-width:620px;
+
+    color:var(--muted);
+
+    font-size:1.08rem;
+
+    line-height:1.8;
+
+    margin-bottom:40px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:14px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    padding:16px 28px;
+    border-radius:999px;
+    transition:0.35s;
+    font-weight:600;
+    display:inline-flex;
+    align-items:center;
+    gap:12px;
+}
+
+.btn-dark{
+    background:#181818;
+    color:#fff;
+}
+
+.btn-light{
+    background:rgba(255,255,255,0.5);
+    border:1px solid rgba(0,0,0,0.08);
+}
+
+.btn:hover{
+    transform:translateY(-4px);
+}
+
+/* HERO CARD */
+
+.hero-card{
+    position:relative;
+
+    height:760px;
+
+    border-radius:40px;
+
+    overflow:hidden;
+
+    box-shadow:0 40px 90px rgba(0,0,0,0.10);
+}
+
+.hero-card img{
+    height:100%;
+}
+
+.hero-overlay{
+    position:absolute;
+    inset:0;
+
+    background:
+    linear-gradient(to top,
+    rgba(0,0,0,0.45),
+    rgba(0,0,0,0));
+}
+
+.hero-floating{
+    position:absolute;
+    bottom:28px;
+    left:28px;
+
+    padding:18px 22px;
+
+    background:rgba(255,255,255,0.88);
+
+    backdrop-filter:blur(14px);
+
+    border-radius:24px;
+
+    max-width:280px;
+}
+
+.hero-floating h3{
+    font-size:1rem;
+    margin-bottom:8px;
+}
+
+.hero-floating p{
+    margin:0;
+    font-size:0.9rem;
+    line-height:1.6;
+}
+
+/* SECTIONS */
+
+section{
+    padding:120px 0;
+}
+
+.section-head{
+    margin-bottom:60px;
+}
+
+.section-label{
+    color:var(--gold);
+
+    text-transform:uppercase;
+
+    letter-spacing:0.12em;
+
+    font-size:0.8rem;
+
+    margin-bottom:18px;
+}
+
+.section-title{
+    font-size:clamp(2.8rem,6vw,6rem);
+
+    line-height:0.94;
+
+    letter-spacing:-0.07em;
+
+    margin-bottom:22px;
+}
+
+.section-description{
+    max-width:760px;
+
+    color:var(--muted);
+
+    line-height:1.8;
+
+    font-size:1.05rem;
+}
+
+/* SERVICES */
+
+.services-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.service-card{
+    background:rgba(255,255,255,0.58);
+
+    border:1px solid var(--line);
+
+    border-radius:var(--radius);
+
+    overflow:hidden;
+
+    transition:0.35s;
+}
+
+.service-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 25px 60px rgba(0,0,0,0.08);
+}
+
+.service-image{
+    height:280px;
+    overflow:hidden;
+}
+
+.service-image img{
+    height:100%;
+    transition:0.5s;
+}
+
+.service-card:hover img{
+    transform:scale(1.05);
+}
+
+.service-content{
+    padding:30px;
+}
+
+.service-content h3{
+    font-size:1.7rem;
+    margin-bottom:14px;
+    letter-spacing:-0.05em;
+}
+
+.service-content p{
+    color:var(--muted);
+    line-height:1.75;
+    margin-bottom:24px;
+}
+
+.price{
+    font-size:1.35rem;
+    font-weight:700;
+}
+
+/* TRAINING */
+
+.training{
+    background:#171717;
+    color:#fff;
+
+    border-radius:60px;
+
+    overflow:hidden;
+}
+
+.training .container{
+    padding:110px 0;
+}
+
+.training .section-description{
+    color:rgba(255,255,255,0.7);
+}
+
+.training-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:24px;
+
+    margin-top:50px;
+}
+
+.training-card{
+    padding:38px;
+
+    background:rgba(255,255,255,0.05);
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    border-radius:32px;
+}
+
+.training-card h3{
+    font-size:1.8rem;
+    margin-bottom:18px;
+}
+
+.training-card p{
+    color:rgba(255,255,255,0.7);
+
+    line-height:1.75;
+
+    margin-bottom:24px;
+}
+
+.training-card ul{
+    padding-left:18px;
+
+    color:rgba(255,255,255,0.7);
+
+    line-height:2;
+}
+
+/* CTA */
+
+.cta{
+    text-align:center;
+}
+
+.cta-box{
+    background:#fff;
+
+    border-radius:60px;
+
+    padding:90px 40px;
+
+    border:1px solid var(--line);
+}
+
+.cta h2{
+    font-size:clamp(3rem,7vw,7rem);
+
+    line-height:0.9;
+
+    letter-spacing:-0.08em;
+
+    margin-bottom:24px;
+}
+
+.cta p{
+    max-width:700px;
+
+    margin:auto;
+
+    color:var(--muted);
+
+    line-height:1.8;
+
+    margin-bottom:36px;
+}
+
+/* FOOTER */
+
+footer{
+    padding:40px 0;
+}
+
+.footer-grid{
+    border-top:1px solid var(--line);
+
+    padding-top:30px;
+
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:20px;
+
+    color:var(--muted);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:980px){
+
+    .hero-grid,
+    .training-grid,
+    .services-grid{
+        grid-template-columns:1fr;
     }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    .hero-card{
+        height:520px;
     }
 
-    html {
-      scroll-behavior: smooth;
+    nav{
+        padding:14px 18px;
     }
 
-    body {
-      font-family: Inter, Arial, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      overflow-x: hidden;
+    .nav-links{
+        display:none;
     }
 
-    a {
-      color: inherit;
-      text-decoration: none;
+    .hero h1{
+        font-size:4.5rem;
     }
 
-    img {
-      width: 100%;
-      display: block;
-      object-fit: cover;
+    section{
+        padding:90px 0;
     }
 
-    .container {
-      width: min(1180px, 92%);
-      margin: auto;
+    .training{
+        border-radius:34px;
     }
 
-    .nav {
-      position: fixed;
-      top: 18px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: min(1180px, 92%);
-      background: rgba(243, 241, 238, 0.82);
-      backdrop-filter: blur(20px);
-      border: 1px solid rgba(23, 27, 41, 0.08);
-      border-radius: 999px;
-      padding: 14px 22px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 50;
+    .cta-box{
+        border-radius:34px;
     }
 
-    .logo {
-      font-weight: 800;
-      letter-spacing: -0.04em;
-      font-size: 1.2rem;
-    }
+}
 
-    .nav-links {
-      display: flex;
-      gap: 28px;
-      font-size: 0.92rem;
-      color: var(--muted);
-    }
-
-    .nav-cta {
-      padding: 11px 18px;
-      border-radius: 999px;
-      background: var(--dark);
-      color: white;
-      font-size: 0.9rem;
-      font-weight: 600;
-    }
-
-    .hero {
-      min-height: 100vh;
-      display: grid;
-      align-items: center;
-      padding: 130px 0 70px;
-      position: relative;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
-      gap: 50px;
-      align-items: center;
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      gap: 10px;
-      align-items: center;
-      color: var(--muted);
-      font-size: 0.9rem;
-      margin-bottom: 24px;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    .eyebrow::before {
-      content: "";
-      width: 42px;
-      height: 1px;
-      background: var(--accent);
-    }
-
-    h1 {
-      font-size: clamp(4rem, 9vw, 8.6rem);
-      line-height: 0.88;
-      letter-spacing: -0.08em;
-      max-width: 900px;
-      margin-bottom: 32px;
-    }
-
-    .hero p {
-      font-size: 1.15rem;
-      line-height: 1.7;
-      color: var(--muted);
-      max-width: 560px;
-      margin-bottom: 38px;
-    }
-
-    .hero-buttons {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      padding: 15px 24px;
-      border-radius: 999px;
-      font-weight: 700;
-      transition: 0.3s;
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .btn-dark {
-      background: var(--dark);
-      color: white;
-    }
-
-    .btn-light {
-      border: 1px solid var(--line);
-      color: var(--dark);
-      background: rgba(255,255,255,0.45);
-    }
-
-    .btn:hover {
-      transform: translateY(-3px);
-    }
-
-    .hero-visual {
-      position: relative;
-      min-height: 620px;
-    }
-
-    .book-card {
-      position: absolute;
-      inset: 60px 0 0 0;
-      border-radius: 44px;
-      background:
-        linear-gradient(140deg, rgba(255,255,255,0.8), rgba(232,227,220,0.5)),
-        url("https://images.unsplash.com/photo-1596462502278-27bfdc403348?q=80&w=1600&auto=format&fit=crop");
-      background-size: cover;
-      background-position: center;
-      box-shadow: 0 30px 80px rgba(17,20,33,0.12);
-      overflow: hidden;
-    }
-
-    .book-card::after {
-      content: "The Brow Edit";
-      position: absolute;
-      left: 34px;
-      bottom: 34px;
-      font-family: Georgia, serif;
-      font-size: 3.2rem;
-      color: white;
-      max-width: 300px;
-      line-height: 0.9;
-      text-shadow: 0 12px 30px rgba(0,0,0,0.25);
-    }
-
-    .floating-label {
-      position: absolute;
-      right: -14px;
-      top: 120px;
-      background: white;
-      padding: 18px 22px;
-      border-radius: 22px;
-      box-shadow: 0 20px 45px rgba(17,20,33,0.12);
-      font-weight: 700;
-    }
-
-    .section {
-      padding: 110px 0;
-    }
-
-    .section-title {
-      font-size: clamp(2.6rem, 5vw, 5.6rem);
-      line-height: 0.95;
-      letter-spacing: -0.07em;
-      margin-bottom: 22px;
-    }
-
-    .section-intro {
-      color: var(--muted);
-      font-size: 1.1rem;
-      line-height: 1.7;
-      max-width: 720px;
-      margin-bottom: 48px;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
-    }
-
-    .card {
-      background: rgba(255,255,255,0.62);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      padding: 30px;
-      transition: 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 24px 55px rgba(17,20,33,0.08);
-    }
-
-    .card span {
-      display: inline-block;
-      color: var(--accent);
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      margin-bottom: 18px;
-      font-weight: 800;
-    }
-
-    .card h3 {
-      font-size: 1.55rem;
-      margin-bottom: 14px;
-      letter-spacing: -0.04em;
-    }
-
-    .card p {
-      color: var(--muted);
-      line-height: 1.65;
-      margin-bottom: 22px;
-    }
-
-    .price {
-      font-size: 1.4rem;
-      font-weight: 800;
-    }
-
-    .split {
-      display: grid;
-      grid-template-columns: 0.9fr 1.1fr;
-      gap: 50px;
-      align-items: center;
-    }
-
-    .image-box {
-      border-radius: 42px;
-      min-height: 620px;
-      background: url("https://images.unsplash.com/photo-1607006483224-7f2a3f1b9b8b?q=80&w=1600&auto=format&fit=crop");
-      background-size: cover;
-      background-position: center;
-      box-shadow: 0 30px 80px rgba(17,20,33,0.12);
-    }
-
-    .list {
-      display: grid;
-      gap: 18px;
-    }
-
-    .list-item {
-      display: grid;
-      grid-template-columns: auto 1fr;
-      gap: 18px;
-      padding: 22px;
-      border-radius: 24px;
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,0.55);
-    }
-
-    .number {
-      width: 42px;
-      height: 42px;
-      border-radius: 50%;
-      background: var(--dark);
-      color: white;
-      display: grid;
-      place-items: center;
-      font-weight: 800;
-    }
-
-    .list-item h4 {
-      font-size: 1.2rem;
-      margin-bottom: 6px;
-    }
-
-    .list-item p {
-      color: var(--muted);
-      line-height: 1.6;
-    }
-
-    .dark-section {
-      background: var(--dark);
-      color: white;
-      border-radius: 54px;
-      padding: 90px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .dark-section p {
-      color: rgba(255,255,255,0.68);
-    }
-
-    .training-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 22px;
-      margin-top: 42px;
-    }
-
-    .training-card {
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 30px;
-      padding: 34px;
-    }
-
-    .training-card h3 {
-      font-size: 1.6rem;
-      margin-bottom: 14px;
-    }
-
-    .training-card ul {
-      margin: 24px 0;
-      padding-left: 18px;
-      color: rgba(255,255,255,0.75);
-      line-height: 1.8;
-    }
-
-    .process {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 18px;
-    }
-
-    .process-step {
-      padding: 28px;
-      background: rgba(255,255,255,0.6);
-      border: 1px solid var(--line);
-      border-radius: 28px;
-    }
-
-    .process-step strong {
-      display: block;
-      color: var(--accent);
-      margin-bottom: 16px;
-    }
-
-    .process-step h3 {
-      margin-bottom: 10px;
-      font-size: 1.3rem;
-    }
-
-    .process-step p {
-      color: var(--muted);
-      line-height: 1.6;
-    }
-
-    .testimonial {
-      text-align: center;
-      max-width: 900px;
-      margin: auto;
-    }
-
-    .testimonial blockquote {
-      font-family: Georgia, serif;
-      font-size: clamp(2rem, 4vw, 4.8rem);
-      line-height: 1.05;
-      letter-spacing: -0.05em;
-      margin-bottom: 28px;
-    }
-
-    .cta {
-      text-align: center;
-      padding: 120px 0;
-    }
-
-    .cta-box {
-      background: var(--white);
-      border: 1px solid var(--line);
-      border-radius: 54px;
-      padding: 80px 30px;
-      box-shadow: 0 30px 80px rgba(17,20,33,0.08);
-    }
-
-    .cta h2 {
-      font-size: clamp(3rem, 7vw, 7rem);
-      letter-spacing: -0.08em;
-      line-height: 0.9;
-      margin-bottom: 24px;
-    }
-
-    .cta p {
-      color: var(--muted);
-      font-size: 1.1rem;
-      max-width: 620px;
-      margin: 0 auto 34px;
-      line-height: 1.7;
-    }
-
-    footer {
-      padding: 40px 0;
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    .footer-grid {
-      display: flex;
-      justify-content: space-between;
-      gap: 30px;
-      flex-wrap: wrap;
-      border-top: 1px solid var(--line);
-      padding-top: 28px;
-    }
-
-    @media (max-width: 900px) {
-      .nav-links {
-        display: none;
-      }
-
-      .hero-grid,
-      .split,
-      .training-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .cards,
-      .process {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-visual {
-        min-height: 430px;
-      }
-
-      .book-card {
-        inset: 0;
-      }
-
-      .dark-section {
-        padding: 44px 24px;
-        border-radius: 36px;
-      }
-
-      h1 {
-        font-size: 4.4rem;
-      }
-
-      .section {
-        padding: 80px 0;
-      }
-
-      .image-box {
-        min-height: 430px;
-      }
-    }
-  </style>
+</style>
 </head>
 
 <body>
 
-  <nav class="nav">
-    <div class="logo">Muses of Beauty</div>
+<!-- NAV -->
+
+<nav>
+
+    <div class="logo">
+        MUSES <span>of</span> BEAUTY
+    </div>
+
     <div class="nav-links">
-      <a href="#servicios">Servicios</a>
-      <a href="#metodo">Método</a>
-      <a href="#formacion">Formación</a>
-      <a href="#contacto">Contacto</a>
+        <a href="#servicios">SERVICIOS</a>
+        <a href="#academy">FORMACIÓN</a>
+        <a href="#contacto">CONTACTO</a>
     </div>
-    <a class="nav-cta" href="https://wa.me/34675875546" target="_blank">Reservar</a>
-  </nav>
 
-  <header class="hero">
+    <a href="https://wa.me/34675875546" class="nav-btn">
+        RESERVAR
+    </a>
+
+</nav>
+
+<!-- HERO -->
+
+<header class="hero">
+
     <div class="container hero-grid">
-      <div>
-        <div class="eyebrow">Brow Bar · Micropigmentación · Formación</div>
-        <h1>Muses of Beauty</h1>
-        <p>
-          Estudio especializado en micropigmentación natural de cejas, labios y tratamientos de mirada.
-          Una experiencia premium, personalizada y diseñada para realzar tu belleza sin perder naturalidad.
-        </p>
-        <div class="hero-buttons">
-          <a class="btn btn-dark" href="#servicios">Ver tratamientos →</a>
-          <a class="btn btn-light" href="#formacion">Talleres y clases</a>
-        </div>
-      </div>
 
-      <div class="hero-visual">
-        <div class="book-card"></div>
-        <div class="floating-label">Quiet Luxury Brow Studio</div>
-      </div>
-    </div>
-  </header>
+        <div class="hero-left">
 
-  <section class="section" id="servicios">
-    <div class="container">
-      <h2 class="section-title">Tratamientos signature</h2>
-      <p class="section-intro">
-        Servicios diseñados para mujeres que buscan una imagen cuidada, elegante y natural. 
-        Cada tratamiento comienza con asesoría previa para adaptar técnica, forma y tono a tu rostro.
-      </p>
-
-      <div class="cards">
-        <div class="card">
-          <span>01 · Brows</span>
-          <h3>Muses Hair Stroke</h3>
-          <p>Técnica pelo a pelo, natural, sin cortes marcados y saludable para todo tipo de piel.</p>
-          <div class="price">desde 210 €</div>
-        </div>
-
-        <div class="card">
-          <span>02 · Brows</span>
-          <h3>Combo Brows</h3>
-          <p>Técnica mixta de pelo a pelo y sombreado natural para una ceja definida y suave.</p>
-          <div class="price">desde 245 €</div>
-        </div>
-
-        <div class="card">
-          <span>03 · Ojeras</span>
-          <h3>Neutralización de ojeras</h3>
-          <p>Dermopigmentación para neutralizar tonos oscuros y devolver luminosidad al rostro.</p>
-          <div class="price">desde 350 €</div>
-        </div>
-
-        <div class="card">
-          <span>04 · Labios</span>
-          <h3>Micropigmentación de labios</h3>
-          <p>Color natural, definición suave y efecto saludable para labios con más vida.</p>
-          <div class="price">desde 196 €</div>
-        </div>
-
-        <div class="card">
-          <span>05 · Skin</span>
-          <h3>Glass Skin</h3>
-          <p>Limpieza profunda e hidratación facial para conseguir una piel luminosa y pulida.</p>
-          <div class="price">desde 120 €</div>
-        </div>
-
-        <div class="card">
-          <span>06 · Mirada</span>
-          <h3>Lifting de pestañas</h3>
-          <p>Curvatura natural, tinte y efecto mirada abierta sin necesidad de extensiones.</p>
-          <div class="price">45 €</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="metodo">
-    <div class="container split">
-      <div class="image-box"></div>
-
-      <div>
-        <h2 class="section-title">Natural, preciso, personalizado.</h2>
-        <p class="section-intro">
-          En Muses of Beauty no trabajamos cejas en serie. Diseñamos cada resultado según facciones,
-          tono de piel, expresión, estilo personal y objetivo estético.
-        </p>
-
-        <div class="list">
-          <div class="list-item">
-            <div class="number">1</div>
-            <div>
-              <h4>Asesoría previa</h4>
-              <p>Analizamos tu caso, resolvemos dudas y definimos qué técnica encaja mejor contigo.</p>
+            <div class="hero-tag">
+                Brow Bar · Micropigmentación · Academy
             </div>
-          </div>
 
-          <div class="list-item">
-            <div class="number">2</div>
-            <div>
-              <h4>Diseño personalizado</h4>
-              <p>Medimos, dibujamos y ajustamos la forma antes de comenzar el tratamiento.</p>
+            <h1>
+                MUSES <span>of</span><br>
+                BEAUTY
+            </h1>
+
+            <p>
+                Brow Bar especializado en micropigmentación natural, diseño de cejas,
+                labios y tratamientos de mirada. Una experiencia estética premium,
+                elegante y diseñada para potenciar la belleza natural.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#servicios" class="btn btn-dark">
+                    Ver tratamientos →
+                </a>
+
+                <a href="#academy" class="btn btn-light">
+                    Formación profesional
+                </a>
+
             </div>
-          </div>
 
-          <div class="list-item">
-            <div class="number">3</div>
-            <div>
-              <h4>Resultado natural</h4>
-              <p>Buscamos equilibrio, elegancia y una mejora visible sin efecto artificial.</p>
+        </div>
+
+        <div class="hero-card">
+
+            <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1600&auto=format&fit=crop" alt="">
+
+            <div class="hero-overlay"></div>
+
+            <div class="hero-floating">
+
+                <h3>Quiet Luxury Brow Studio</h3>
+
+                <p>
+                    Naturalidad, precisión y diseño editorial en cada tratamiento.
+                </p>
+
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <section class="section" id="formacion">
+        </div>
+
+    </div>
+
+</header>
+
+<!-- SERVICES -->
+
+<section id="servicios">
+
     <div class="container">
-      <div class="dark-section">
-        <h2 class="section-title">Talleres y clases de micropigmentación</h2>
-        <p class="section-intro">
-          Formación pensada para alumnas que quieren iniciarse o perfeccionar su técnica en cejas,
-          diseño, visagismo, colorimetría y protocolos profesionales de trabajo.
-        </p>
 
-        <div class="training-grid">
-          <div class="training-card">
-            <h3>Formación privada</h3>
-            <p>Sesiones personalizadas para aprender con acompañamiento directo.</p>
-            <ul>
-              <li>Diseño de cejas y visagismo</li>
-              <li>Técnica Hair Stroke</li>
-              <li>Preparación de piel y pigmentos</li>
-              <li>Protocolos de higiene y seguridad</li>
-            </ul>
-            <a class="btn btn-light" href="https://wa.me/34675875546" target="_blank">Solicitar información</a>
-          </div>
+        <div class="section-head">
 
-          <div class="training-card">
-            <h3>Workshops intensivos</h3>
-            <p>Clases grupales para aprender metodología, práctica y estructura profesional.</p>
-            <ul>
-              <li>Teoría + demostración</li>
-              <li>Práctica guiada</li>
-              <li>Material de apoyo</li>
-              <li>Orientación para captar clientas</li>
-            </ul>
-            <a class="btn btn-light" href="https://wa.me/34675875546" target="_blank">Quiero apuntarme</a>
-          </div>
+            <div class="section-label">
+                Signature Treatments
+            </div>
+
+            <h2 class="section-title">
+                Tratamientos premium.
+            </h2>
+
+            <p class="section-description">
+                Técnicas avanzadas de micropigmentación y diseño facial enfocadas en resultados elegantes, naturales y duraderos.
+            </p>
+
         </div>
-      </div>
-    </div>
-  </section>
 
-  <section class="section">
+        <div class="services-grid">
+
+            <div class="service-card">
+
+                <div class="service-image">
+                    <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=1600&auto=format&fit=crop">
+                </div>
+
+                <div class="service-content">
+
+                    <h3>Muses Hair Stroke</h3>
+
+                    <p>
+                        Técnica pelo a pelo natural adaptada a cada tipo de piel y rostro.
+                    </p>
+
+                    <div class="price">
+                        desde 210€
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="service-card">
+
+                <div class="service-image">
+                    <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?q=80&w=1600&auto=format&fit=crop">
+                </div>
+
+                <div class="service-content">
+
+                    <h3>Neutralización</h3>
+
+                    <p>
+                        Tratamientos de neutralización de labios y ojeras con acabado luminoso.
+                    </p>
+
+                    <div class="price">
+                        desde 196€
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="service-card">
+
+                <div class="service-image">
+                    <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=1600&auto=format&fit=crop">
+                </div>
+
+                <div class="service-content">
+
+                    <h3>Lifting & Lashes</h3>
+
+                    <p>
+                        Curvatura elegante y natural para potenciar la mirada sin extensiones.
+                    </p>
+
+                    <div class="price">
+                        desde 45€
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- TRAINING -->
+
+<section id="academy">
+
+    <div class="container training">
+
+        <div class="container">
+
+            <div class="section-head">
+
+                <div class="section-label">
+                    Muses Academy
+                </div>
+
+                <h2 class="section-title">
+                    Formación profesional.
+                </h2>
+
+                <p class="section-description">
+                    Aprende técnicas avanzadas de micropigmentación y brow design en workshops exclusivos y clases privadas.
+                </p>
+
+            </div>
+
+            <div class="training-grid">
+
+                <div class="training-card">
+
+                    <h3>Private Masterclass</h3>
+
+                    <p>
+                        Formación individual intensiva enfocada en técnica, visagismo y metodología profesional.
+                    </p>
+
+                    <ul>
+                        <li>Diseño de cejas</li>
+                        <li>Hair Stroke</li>
+                        <li>Colorimetría</li>
+                        <li>Marketing para captar clientas</li>
+                    </ul>
+
+                </div>
+
+                <div class="training-card">
+
+                    <h3>Workshops</h3>
+
+                    <p>
+                        Talleres premium con teoría, práctica y acompañamiento personalizado.
+                    </p>
+
+                    <ul>
+                        <li>Práctica guiada</li>
+                        <li>Modelos reales</li>
+                        <li>Material incluido</li>
+                        <li>Certificado final</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CTA -->
+
+<section class="cta" id="contacto">
+
     <div class="container">
-      <h2 class="section-title">La experiencia Muses</h2>
-      <p class="section-intro">
-        Un proceso cuidado de principio a fin, con enfoque premium y resultados realistas.
-      </p>
 
-      <div class="process">
-        <div class="process-step">
-          <strong>01</strong>
-          <h3>Reserva</h3>
-          <p>Agenda tu asesoría o tratamiento a través de WhatsApp.</p>
+        <div class="cta-box">
+
+            <h2>
+                Reserva tu asesoría.
+            </h2>
+
+            <p>
+                Cuéntanos tu caso y te ayudaremos a encontrar el tratamiento o formación ideal para ti.
+            </p>
+
+            <a href="https://wa.me/34675875546" class="btn btn-dark">
+                Hablar por WhatsApp →
+            </a>
+
         </div>
 
-        <div class="process-step">
-          <strong>02</strong>
-          <h3>Diagnóstico</h3>
-          <p>Revisamos piel, forma natural y objetivo estético.</p>
-        </div>
-
-        <div class="process-step">
-          <strong>03</strong>
-          <h3>Tratamiento</h3>
-          <p>Aplicamos la técnica más adecuada con precisión y cuidado.</p>
-        </div>
-
-        <div class="process-step">
-          <strong>04</strong>
-          <h3>Retoque</h3>
-          <p>Ajustamos el resultado final después del proceso de curación.</p>
-        </div>
-      </div>
     </div>
-  </section>
 
-  <section class="section">
-    <div class="container testimonial">
-      <blockquote>
-        “Brows that look expensive, natural and completely yours.”
-      </blockquote>
-      <p class="section-intro">
-        Micropigmentación natural para mujeres que quieren verse arregladas cada día,
-        sin perder su esencia.
-      </p>
-    </div>
-  </section>
+</section>
 
-  <section class="cta" id="contacto">
-    <div class="container">
-      <div class="cta-box">
-        <h2>Reserva tu asesoría</h2>
-        <p>
-          Cuéntanos tu caso y te recomendaremos el tratamiento o formación más adecuada para ti.
-        </p>
-        <a class="btn btn-dark" href="https://wa.me/34675875546" target="_blank">Hablar por WhatsApp →</a>
-      </div>
-    </div>
-  </section>
+<footer>
 
-  <footer>
     <div class="container footer-grid">
-      <div>© 2026 Muses of Beauty</div>
-      <div>Brow Bar · Micropigmentación · Formación</div>
-      <div>Diseño web by KumCode Studio</div>
+
+        <div>
+            © 2026 MUSES OF BEAUTY
+        </div>
+
+        <div>
+            Brow Bar · Micropigmentación · Academy
+        </div>
+
+        <div>
+            Designed by KumCode Studio
+        </div>
+
     </div>
-  </footer>
+
+</footer>
 
 </body>
 </html>
