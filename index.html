@@ -1,3 +1,6 @@
+<!-- HTML COMPLETO PREMIUM - DRA. MIRIAM CHINCHÓN -->
+<!-- Copia desde <!DOCTYPE html> hasta </html> -->
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -8,26 +11,29 @@
 
 <style>
 :root{
-  --bg:#f4eee6;
-  --sand:#d8c3aa;
-  --sand2:#b99b78;
-  --cream:#faf7f2;
+  --bg:#f7f2ea;
+  --cream:#fbf8f3;
   --white:#ffffff;
-  --black:#080808;
-  --text:#181818;
-  --muted:#6f6a63;
+  --black:#090909;
+  --text:#171717;
+  --muted:#746d63;
+  --gold:#b99563;
+  --gold-soft:#dac5a7;
   --line:rgba(0,0,0,.09);
-  --shadow:0 24px 70px rgba(0,0,0,.08);
+  --shadow:0 30px 90px rgba(0,0,0,.10);
 }
 
 *{margin:0;padding:0;box-sizing:border-box}
+
 html{scroll-behavior:smooth}
+
 body{
   font-family:Inter,Arial,sans-serif;
   background:var(--bg);
   color:var(--text);
   overflow-x:hidden;
 }
+
 a{text-decoration:none;color:inherit}
 
 .nav{
@@ -36,45 +42,46 @@ a{text-decoration:none;color:inherit}
   left:0;
   width:100%;
   z-index:999;
-  padding:16px 7%;
+  padding:18px 7%;
   display:flex;
   justify-content:space-between;
   align-items:center;
-  background:rgba(244,238,230,.94);
-  backdrop-filter:blur(20px);
-  border-bottom:1px solid var(--line);
+  background:rgba(247,242,234,.86);
+  backdrop-filter:blur(24px);
+  border-bottom:1px solid rgba(0,0,0,.06);
 }
 
 .logo{
-  font-weight:950;
-  letter-spacing:-.8px;
-  font-size:20px;
+  font-size:19px;
+  font-weight:900;
+  letter-spacing:-.6px;
 }
 
 .logo span{
   display:block;
-  font-size:11px;
-  color:var(--sand2);
-  letter-spacing:1.5px;
+  font-size:10px;
+  color:var(--gold);
   text-transform:uppercase;
-  margin-top:3px;
+  letter-spacing:2px;
+  margin-top:4px;
 }
 
 .nav nav{
   display:flex;
-  gap:28px;
+  gap:30px;
 }
 
 .nav nav a{
-  font-size:14px;
-  font-weight:900;
+  font-size:13px;
+  font-weight:850;
+  color:#222;
 }
 
 .btn{
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  padding:14px 26px;
+  padding:15px 28px;
   border-radius:999px;
   background:var(--black);
   color:white;
@@ -82,31 +89,25 @@ a{text-decoration:none;color:inherit}
   font-weight:900;
   transition:.35s;
   cursor:pointer;
-  box-shadow:0 14px 38px rgba(0,0,0,.14);
+  box-shadow:0 18px 45px rgba(0,0,0,.15);
 }
 
 .btn:hover{
-  background:var(--sand2);
-  border-color:var(--sand2);
-  color:white;
   transform:translateY(-4px);
+  background:var(--gold);
+  border-color:var(--gold);
 }
 
-.btn.secondary{
+.btn.light{
   background:white;
   color:black;
-  border:1px solid rgba(0,0,0,.08);
+  border:1px solid rgba(0,0,0,.09);
   box-shadow:none;
 }
 
-.mobile-top-services,
-.mobile-bottom{
-  display:none;
-}
-
 .hero{
-  min-height:94vh;
-  padding:135px 7% 70px;
+  min-height:100vh;
+  padding:145px 7% 80px;
   display:grid;
   grid-template-columns:1.05fr .95fr;
   gap:70px;
@@ -117,11 +118,11 @@ a{text-decoration:none;color:inherit}
 .hero::before{
   content:"";
   position:absolute;
-  width:620px;
-  height:620px;
-  right:-250px;
-  top:90px;
-  background:radial-gradient(circle,rgba(185,155,120,.28),transparent 65%);
+  right:-260px;
+  top:100px;
+  width:660px;
+  height:660px;
+  background:radial-gradient(circle,rgba(185,149,99,.28),transparent 68%);
   pointer-events:none;
 }
 
@@ -130,184 +131,248 @@ a{text-decoration:none;color:inherit}
   padding:10px 16px;
   border-radius:999px;
   background:white;
-  border:1px solid rgba(0,0,0,.06);
-  color:var(--sand2);
-  font-size:13px;
+  border:1px solid rgba(0,0,0,.07);
+  color:var(--gold);
+  font-size:12px;
   font-weight:900;
-  margin-bottom:22px;
+  letter-spacing:.5px;
+  margin-bottom:24px;
 }
 
 h1{
-  font-size:clamp(46px,7vw,92px);
-  line-height:.92;
+  font-size:clamp(48px,7vw,96px);
+  line-height:.9;
   letter-spacing:-4px;
-  margin-bottom:24px;
+  margin-bottom:26px;
 }
 
 .serif{
   font-family:Georgia,serif;
   font-style:italic;
-  color:var(--sand2);
+  color:var(--gold);
   font-weight:400;
 }
 
 .hero p{
+  max-width:680px;
+  color:#555;
   font-size:20px;
   line-height:1.75;
-  color:#555;
-  max-width:680px;
-  margin-bottom:32px;
+  margin-bottom:34px;
 }
 
 .hero-actions{
   display:flex;
   gap:14px;
   flex-wrap:wrap;
-  margin-bottom:28px;
 }
 
-.trust{
-  display:flex;
-  gap:18px;
-  flex-wrap:wrap;
-  color:#555;
-  font-size:14px;
-  font-weight:800;
-}
-
-.trust strong{color:black}
-
-.hero-photo{
-  min-height:620px;
-  border-radius:42px;
-  border:10px solid white;
+.hero-image{
+  min-height:640px;
+  border-radius:46px;
   background:
-    linear-gradient(to bottom,rgba(255,255,255,.04),rgba(0,0,0,.24)),
-    url("https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&w=1200&q=90");
+    linear-gradient(to bottom,rgba(255,255,255,.03),rgba(0,0,0,.22)),
+    url("https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1200&q=90");
   background-size:cover;
   background-position:center;
+  border:12px solid white;
   box-shadow:var(--shadow);
-  transform:rotate(1deg);
-  transition:.5s;
+  position:relative;
+  overflow:hidden;
 }
 
-.hero-photo:hover{
-  transform:translateY(-12px) rotate(0deg);
+.hero-card{
+  position:absolute;
+  left:28px;
+  bottom:28px;
+  right:28px;
+  padding:24px;
+  border-radius:28px;
+  background:rgba(255,255,255,.82);
+  backdrop-filter:blur(18px);
+  border:1px solid rgba(255,255,255,.8);
+}
+
+.hero-card strong{
+  display:block;
+  font-size:22px;
+  margin-bottom:6px;
+}
+
+.hero-card span{
+  color:#666;
+  line-height:1.5;
 }
 
 .quick-info{
-  margin:0 7% 30px;
+  margin:0 7% 40px;
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  gap:16px;
+  gap:18px;
 }
 
 .info-card{
-  background:white;
-  padding:24px;
-  border-radius:26px;
-  border:1px solid var(--line);
-  box-shadow:0 14px 40px rgba(0,0,0,.05);
+  background:rgba(255,255,255,.78);
+  border:1px solid rgba(255,255,255,.9);
+  padding:28px;
+  border-radius:30px;
+  box-shadow:0 18px 50px rgba(0,0,0,.06);
 }
 
 .info-card strong{
   display:block;
-  font-size:23px;
-  color:var(--sand2);
+  color:var(--gold);
+  font-size:24px;
   margin-bottom:8px;
 }
 
 .section{
-  padding:85px 7%;
+  padding:90px 7%;
 }
 
 .tag{
   display:block;
-  color:var(--sand2);
-  font-size:13px;
-  font-weight:900;
-  letter-spacing:2px;
+  color:var(--gold);
+  font-size:12px;
+  font-weight:950;
+  letter-spacing:2.4px;
   text-transform:uppercase;
-  margin-bottom:14px;
+  margin-bottom:16px;
 }
 
 h2{
-  font-size:clamp(36px,5vw,68px);
+  font-size:clamp(38px,5vw,72px);
   line-height:1;
-  letter-spacing:-2px;
-  margin-bottom:18px;
+  letter-spacing:-2.5px;
+  margin-bottom:20px;
 }
 
 .section-title{
-  max-width:900px;
-  margin-bottom:40px;
+  max-width:920px;
+  margin-bottom:46px;
 }
 
 .section-title p{
-  color:#555;
-  line-height:1.75;
   font-size:18px;
+  line-height:1.75;
+  color:#5f5a53;
 }
 
-.featured{
+.premium-grid{
   display:grid;
   grid-template-columns:repeat(4,1fr);
   gap:18px;
 }
 
-.feature-card{
+.premium-card{
   background:white;
-  padding:28px;
-  border-radius:30px;
+  padding:30px;
+  border-radius:34px;
   border:1px solid var(--line);
-  box-shadow:0 16px 45px rgba(0,0,0,.06);
-  transition:.4s;
+  box-shadow:0 18px 55px rgba(0,0,0,.06);
+  transition:.35s;
 }
 
-.feature-card:hover{
+.premium-card:hover{
   transform:translateY(-10px);
 }
 
-.feature-card.dark{
-  background:#080808;
+.premium-card.dark{
+  background:#090909;
   color:white;
 }
 
-.feature-card h3{
-  font-size:22px;
+.premium-card h3{
+  font-size:23px;
   margin-bottom:10px;
 }
 
-.duration{
-  color:#777;
-  font-size:14px;
-  font-weight:800;
-  margin-bottom:16px;
-}
-
-.feature-card.dark .duration{color:#ddd}
-
-.feature-card p{
-  color:#555;
+.premium-card p{
+  color:#625c54;
   line-height:1.7;
 }
 
-.feature-card.dark p{color:#ddd}
+.premium-card.dark p{
+  color:#ddd;
+}
 
-.feature-note{
-  margin-top:18px;
+.price-pill{
   display:inline-flex;
-  padding:8px 12px;
+  margin-top:18px;
+  padding:9px 14px;
   border-radius:999px;
-  background:#f4f0ea;
-  font-size:12px;
+  background:#f3eadf;
+  font-weight:950;
+  color:#111;
+}
+
+.results{
+  background:#100f0d;
+  color:white;
+  margin:40px 7%;
+  border-radius:48px;
+  padding:70px;
+  overflow:hidden;
+}
+
+.results .section-title p{
+  color:#d6d0c7;
+}
+
+.ba-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+}
+
+.ba-card{
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:34px;
+  overflow:hidden;
+}
+
+.ba-photo{
+  height:330px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  background:#201f1d;
+}
+
+.ba-photo div{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#aaa;
+  font-size:13px;
   font-weight:900;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+  border-right:1px solid rgba(255,255,255,.1);
+}
+
+.ba-photo div:last-child{
+  border-right:none;
+}
+
+.ba-info{
+  padding:24px;
+}
+
+.ba-info h3{
+  font-size:22px;
+  margin-bottom:8px;
+}
+
+.ba-info p{
+  color:#d0cbc4;
+  line-height:1.6;
 }
 
 .services-panel{
   background:white;
-  border-radius:42px;
-  padding:34px;
+  border-radius:46px;
+  padding:36px;
   border:1px solid var(--line);
   box-shadow:var(--shadow);
 }
@@ -316,7 +381,7 @@ h2{
   display:flex;
   gap:10px;
   flex-wrap:wrap;
-  margin-bottom:30px;
+  margin-bottom:32px;
   position:sticky;
   top:82px;
   background:white;
@@ -325,28 +390,27 @@ h2{
 }
 
 .category-nav a{
-  padding:11px 16px;
+  padding:12px 17px;
   border-radius:999px;
-  background:#f5f1ec;
+  background:#f4eee6;
   font-size:13px;
   font-weight:900;
   border:1px solid rgba(0,0,0,.06);
-  transition:.3s;
 }
 
 .category-nav a:hover{
-  background:var(--black);
+  background:#090909;
   color:white;
 }
 
 .service-group{
-  margin-bottom:34px;
-  scroll-margin-top:145px;
+  margin-bottom:36px;
+  scroll-margin-top:150px;
 }
 
 .group-title{
-  font-size:26px;
-  margin-bottom:16px;
+  font-size:28px;
+  margin-bottom:18px;
 }
 
 .accordion{
@@ -355,44 +419,38 @@ h2{
 }
 
 .item{
-  background:#fbfaf8;
-  border-radius:22px;
+  background:#fbfaf7;
+  border-radius:24px;
   overflow:hidden;
   border:1px solid rgba(0,0,0,.08);
-  transition:.3s;
-}
-
-.item:hover{
-  transform:translateY(-4px);
 }
 
 .item button{
   width:100%;
   border:none;
   background:none;
-  padding:20px 22px;
+  padding:22px 24px;
   display:flex;
   justify-content:space-between;
   align-items:center;
   text-align:left;
   cursor:pointer;
-  font-size:16px;
-  font-weight:900;
-  gap:16px;
+  font-size:17px;
+  font-weight:950;
+  gap:18px;
 }
 
 .item button small{
   display:block;
-  margin-top:5px;
   color:#777;
+  margin-top:5px;
   font-size:13px;
 }
 
 .item button span{
-  font-size:28px;
-  color:var(--sand2);
+  color:var(--gold);
+  font-size:30px;
   transition:.3s;
-  flex:none;
 }
 
 .item.active button span{
@@ -406,69 +464,79 @@ h2{
 }
 
 .inner{
-  padding:0 22px 22px;
-  color:#555;
+  padding:0 24px 24px;
+  color:#5f5a53;
   line-height:1.75;
 }
 
-.inner strong{color:black}
-
 .inner-price{
   display:block;
-  margin-top:16px;
-  padding-top:14px;
+  margin-top:18px;
+  padding-top:16px;
   border-top:1px solid rgba(0,0,0,.08);
-  color:var(--black);
-  font-size:20px;
+  font-size:22px;
+  color:black;
   font-weight:950;
 }
 
 .location-grid{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:22px;
+  gap:24px;
 }
 
 .location-card{
   background:white;
-  border-radius:34px;
-  padding:34px;
+  border-radius:38px;
+  padding:38px;
   border:1px solid var(--line);
-  box-shadow:0 16px 45px rgba(0,0,0,.06);
+  box-shadow:0 18px 55px rgba(0,0,0,.06);
+}
+
+.location-card h3{
+  font-size:28px;
+  margin-bottom:14px;
+}
+
+.location-card p{
+  color:#5f5a53;
+  line-height:1.7;
 }
 
 .schedule{
   display:grid;
-  gap:12px;
+  gap:13px;
   margin-top:20px;
 }
 
 .schedule div{
   display:flex;
   justify-content:space-between;
-  padding-bottom:10px;
+  padding-bottom:11px;
   border-bottom:1px solid rgba(0,0,0,.08);
   color:#555;
-  font-weight:750;
+  font-weight:800;
 }
 
 .contact{
   margin:0 7% 80px;
-  padding:62px;
-  background:#080808;
+  padding:70px;
+  background:#090909;
   color:white;
-  border-radius:42px;
+  border-radius:48px;
   box-shadow:var(--shadow);
 }
 
 .contact p{
-  color:#ddd;
-  line-height:1.7;
-  margin-bottom:28px;
+  color:#d8d2ca;
+  line-height:1.75;
+  font-size:18px;
+  max-width:760px;
+  margin-bottom:30px;
 }
 
 footer{
-  padding:30px 7% 100px;
+  padding:34px 7% 100px;
   display:flex;
   justify-content:space-between;
   flex-wrap:wrap;
@@ -477,43 +545,43 @@ footer{
   border-top:1px solid var(--line);
 }
 
-.reveal{
-  opacity:0;
-  transform:translateY(30px);
-  transition:1s ease;
-}
-
-.reveal.active{
-  opacity:1;
-  transform:translateY(0);
+.mobile-top-services,
+.mobile-bottom{
+  display:none;
 }
 
 @media(max-width:1100px){
-  .featured{grid-template-columns:repeat(2,1fr)}
   .hero{grid-template-columns:1fr}
+  .premium-grid{grid-template-columns:repeat(2,1fr)}
+  .ba-grid{grid-template-columns:1fr}
   .location-grid{grid-template-columns:1fr}
 }
 
 @media(max-width:820px){
   body{padding-bottom:88px}
 
-  .nav{padding:12px 5%}
-  .logo{font-size:17px}
-  .logo span{font-size:9px}
+  .nav{
+    padding:12px 5%;
+  }
+
+  .logo{font-size:16px}
+  .logo span{font-size:8px}
 
   .nav nav,
-  .nav .btn{display:none}
+  .nav .btn{
+    display:none;
+  }
 
   .mobile-top-services{
     display:block;
     position:fixed;
-    top:64px;
+    top:62px;
     left:0;
     width:100%;
     z-index:998;
     padding:8px 5% 10px;
-    background:rgba(244,238,230,.96);
-    backdrop-filter:blur(18px);
+    background:rgba(247,242,234,.96);
+    backdrop-filter:blur(20px);
     border-bottom:1px solid rgba(0,0,0,.08);
   }
 
@@ -543,26 +611,27 @@ footer{
   .mobile-bottom a{
     width:100%;
     display:flex;
-    align-items:center;
     justify-content:center;
     padding:15px;
     border-radius:20px;
-    background:var(--black);
+    background:#090909;
     color:white;
     font-weight:900;
   }
 
   .hero{
-    padding:130px 5% 35px;
-    gap:28px;
+    padding:132px 5% 45px;
+    gap:32px;
   }
 
   h1{
-    font-size:43px;
+    font-size:42px;
     letter-spacing:-2px;
   }
 
-  .hero p{font-size:17px}
+  .hero p{
+    font-size:17px;
+  }
 
   .hero-actions{
     display:grid;
@@ -571,30 +640,41 @@ footer{
 
   .btn{width:100%}
 
-  .hero-photo{
-    min-height:280px;
-    border-radius:28px;
-    transform:none;
+  .hero-image{
+    min-height:360px;
+    border-radius:32px;
   }
 
   .quick-info{
-    margin:0 5% 20px;
+    margin:0 5% 30px;
     grid-template-columns:1fr;
   }
 
   .section{
-    padding:48px 5%;
+    padding:54px 5%;
   }
 
-  h2{font-size:36px}
+  h2{
+    font-size:37px;
+  }
 
-  .featured{
+  .premium-grid{
     grid-template-columns:1fr;
+  }
+
+  .results{
+    margin:30px 5%;
+    padding:36px 20px;
+    border-radius:34px;
+  }
+
+  .ba-photo{
+    height:260px;
   }
 
   .services-panel{
     padding:18px;
-    border-radius:30px;
+    border-radius:32px;
   }
 
   .category-nav{
@@ -602,9 +682,9 @@ footer{
   }
 
   .contact{
-    margin:0 5% 30px;
-    padding:34px 22px;
-    border-radius:30px;
+    margin:0 5% 40px;
+    padding:38px 22px;
+    border-radius:34px;
   }
 
   footer{
@@ -619,14 +699,14 @@ footer{
 <header class="nav">
   <div class="logo">
     Dra. Miriam Chinchón
-    <span>Medicina Estética · Madrid</span>
+    <span>Experta en Medicina Estética</span>
   </div>
 
   <nav>
     <a href="#inicio">Inicio</a>
+    <a href="#resultados">Antes y después</a>
     <a href="#servicios">Tratamientos</a>
     <a href="#ubicacion">Ubicación</a>
-    <a href="#contacto">Contacto</a>
   </nav>
 
   <a href="https://wa.me/34680230921" target="_blank" class="btn">Reservar</a>
@@ -635,7 +715,7 @@ footer{
 <div class="mobile-top-services">
   <select id="mobileServiceSelect">
     <option value="">Ver tratamientos</option>
-    <option value="#destacados">Destacados</option>
+    <option value="#resultados">Antes y después</option>
     <option value="#toxina">Toxina</option>
     <option value="#labios">Labios</option>
     <option value="#rellenos">Rellenos faciales</option>
@@ -648,108 +728,149 @@ footer{
 </div>
 
 <div class="mobile-bottom">
-  <a href="https://wa.me/34680230921" target="_blank">Reservar</a>
+  <a href="https://wa.me/34680230921" target="_blank">Reservar cita</a>
 </div>
 
 <section id="inicio" class="hero">
-  <div class="reveal">
-    <div class="eyebrow">Doctora especialista en medicina estética en Madrid</div>
+  <div>
+    <div class="eyebrow">Medicina estética médica · Salamanca, Madrid</div>
 
     <h1>
-      Medicina estética<br>
-      elegante, médica<br>
-      y <span class="serif">natural.</span>
+      Belleza médica,<br>
+      elegante y<br>
+      <span class="serif">natural.</span>
     </h1>
 
     <p>
-      La Dra. Miriam Chinchón trabaja tratamientos faciales médico-estéticos con un enfoque preciso, seguro y personalizado, buscando siempre resultados naturales y armónicos.
+      Tratamientos médico-estéticos realizados por la Dra. Miriam Chinchón con un enfoque preciso, seguro y personalizado para realzar tu belleza sin perder tu esencia.
     </p>
 
     <div class="hero-actions">
       <a href="https://wa.me/34680230921" target="_blank" class="btn">Reservar cita</a>
-      <a href="#servicios" class="btn secondary">Ver tratamientos</a>
-    </div>
-
-    <div class="trust">
-      <div><strong>Doctora</strong> en medicina estética</div>
-      <div><strong>5,0 ★</strong> valoración media</div>
-      <div><strong>Salamanca</strong> Madrid</div>
+      <a href="#servicios" class="btn light">Ver tratamientos</a>
     </div>
   </div>
 
-  <div class="hero-photo reveal"></div>
+  <div class="hero-image">
+    <div class="hero-card">
+      <strong>Dra. Miriam Chinchón</strong>
+      <span>Experta en medicina estética facial, armonización y tratamientos de calidad de piel.</span>
+    </div>
+  </div>
 </section>
 
-<div class="quick-info reveal">
+<div class="quick-info">
   <div class="info-card">
-    <strong>Dra. Miriam Chinchón</strong>
-    Atención médica, personalizada y cercana.
+    <strong>5,0 ★</strong>
+    Valoración media de pacientes.
   </div>
   <div class="info-card">
-    <strong>Lumina Clinic</strong>
-    Calle Conde de Peñalver 61, Salamanca, Madrid.
+    <strong>Doctora</strong>
+    Tratamientos médico-estéticos con criterio profesional.
   </div>
   <div class="info-card">
-    <strong>Lunes a viernes</strong>
-    Horario de 10:00 a 20:00.
+    <strong>10:00 - 20:00</strong>
+    Consulta de lunes a viernes.
   </div>
 </div>
 
 <section id="destacados" class="section">
-  <div class="section-title reveal">
+  <div class="section-title">
     <span class="tag">Tratamientos destacados</span>
-    <h2>Escoge tu tratamiento.</h2>
+    <h2>Resultados visibles con acabado natural.</h2>
     <p>
-      Tratamientos médico-estéticos seleccionados para mejorar la armonía facial, la calidad de la piel y la expresión natural del rostro.
+      Una selección de tratamientos pensados para mejorar la armonía facial, rejuvenecer la expresión y potenciar la calidad de la piel.
     </p>
   </div>
 
-  <div class="featured">
-    <article class="feature-card dark reveal">
-      <h3>Toxina 3 zonas</h3>
-      <div class="duration">20 min</div>
-      <p>Tratamiento para frente, entrecejo y patas de gallo. Resultado fresco, natural y rejuvenecido.</p>
-      <span class="feature-note">320 €</span>
-    </article>
-
-    <article class="feature-card reveal">
+  <div class="premium-grid">
+    <article class="premium-card dark">
       <h3>Aumento de labios</h3>
-      <div class="duration">30 min</div>
-      <p>Volumen, hidratación y definición con ácido hialurónico, manteniendo la armonía facial.</p>
-      <span class="feature-note">300 €</span>
+      <p>Volumen, hidratación y definición con ácido hialurónico, respetando la proporción natural del rostro.</p>
+      <span class="price-pill">300 €</span>
     </article>
 
-    <article class="feature-card reveal">
+    <article class="premium-card">
+      <h3>Toxina 3 zonas</h3>
+      <p>Tratamiento para suavizar arrugas de frente, entrecejo y patas de gallo con resultado descansado.</p>
+      <span class="price-pill">320 €</span>
+    </article>
+
+    <article class="premium-card">
       <h3>Rinomodelación</h3>
-      <div class="duration">30 min</div>
-      <p>Armonización nasal sin cirugía mediante ácido hialurónico.</p>
-      <span class="feature-note">350 €</span>
+      <p>Armonización nasal sin cirugía para equilibrar el perfil y mejorar la proporción facial.</p>
+      <span class="price-pill">350 €</span>
     </article>
 
-    <article class="feature-card reveal">
-      <h3>Valoración</h3>
-      <div class="duration">30 min</div>
-      <p>Consulta médica para valorar el tratamiento más adecuado.</p>
-      <span class="feature-note">40 €</span>
+    <article class="premium-card">
+      <h3>Skinbooster</h3>
+      <p>Hidratación profunda y mejora de la calidad de la piel desde el interior.</p>
+      <span class="price-pill">250 €</span>
+    </article>
+  </div>
+</section>
+
+<section id="resultados" class="results">
+  <div class="section-title">
+    <span class="tag">Antes y después</span>
+    <h2>Casos reales de labios y armonización.</h2>
+    <p>
+      Espacios preparados para añadir fotografías de resultados. Sustituye cada bloque por tus imágenes reales de antes y después.
+    </p>
+  </div>
+
+  <div class="ba-grid">
+    <article class="ba-card">
+      <div class="ba-photo">
+        <div>Antes<br>labios</div>
+        <div>Después<br>labios</div>
+      </div>
+      <div class="ba-info">
+        <h3>Aumento de labios 1ml</h3>
+        <p>Resultado natural, hidratado y definido, manteniendo proporción y elegancia.</p>
+      </div>
+    </article>
+
+    <article class="ba-card">
+      <div class="ba-photo">
+        <div>Antes<br>perfilado</div>
+        <div>Después<br>perfilado</div>
+      </div>
+      <div class="ba-info">
+        <h3>Perfilado e hidratación</h3>
+        <p>Mejora de contorno, textura y jugosidad sin aportar un volumen excesivo.</p>
+      </div>
+    </article>
+
+    <article class="ba-card">
+      <div class="ba-photo">
+        <div>Antes<br>armonización</div>
+        <div>Después<br>armonización</div>
+      </div>
+      <div class="ba-info">
+        <h3>Armonización facial</h3>
+        <p>Tratamientos personalizados para equilibrar rasgos y rejuvenecer el rostro.</p>
+      </div>
     </article>
   </div>
 </section>
 
 <section id="servicios" class="section">
-  <div class="section-title reveal">
+  <div class="section-title">
     <span class="tag">Carta de tratamientos</span>
-    <h2>Tratamientos médico-estéticos.</h2>
+    <h2>Escoge tu tratamiento.</h2>
     <p>
-      Pulsa sobre cada tratamiento para ver la descripción y el precio.
+      Abre cada tratamiento para ver la descripción y el precio.
     </p>
   </div>
 
-  <div class="services-panel reveal">
+  <div class="services-panel">
+
     <div class="category-nav">
       <a href="#toxina">Toxina</a>
       <a href="#labios">Labios</a>
       <a href="#rellenos">Rellenos</a>
-      <a href="#ojera">Ojera</a>
+      <a href="#ojera">Ojeras</a>
       <a href="#piel">Calidad de piel</a>
       <a href="#plexr">Plexr</a>
       <a href="#cosmetica">Cosmética</a>
@@ -760,40 +881,19 @@ footer{
       <h3 class="group-title">Toxina</h3>
       <div class="accordion">
 
-        <div class="item">
-          <button><div>Toxina 1 zona <small>20 min</small></div><span>+</span></button>
-          <div class="content"><div class="inner">Tratamiento de arrugas de expresión en una zona facial: entrecejo, frente o patas de gallo. Resultado natural y rejuvenecedor en pocos días.<span class="inner-price">150 €</span></div></div>
-        </div>
+        <div class="item"><button><div>Toxina 1 zona <small>20 min</small></div><span>+</span></button><div class="content"><div class="inner">Tratamiento de arrugas de expresión en una zona facial: entrecejo, frente o patas de gallo.<span class="inner-price">150 €</span></div></div></div>
 
-        <div class="item">
-          <button><div>Toxina 2 zonas <small>20 min</small></div><span>+</span></button>
-          <div class="content"><div class="inner">Tratamiento de dos zonas de expresión facial con toxina botulínica para suavizar arrugas sin perder naturalidad.<span class="inner-price">250 €</span></div></div>
-        </div>
+        <div class="item"><button><div>Toxina 2 zonas <small>20 min</small></div><span>+</span></button><div class="content"><div class="inner">Tratamiento de dos zonas de expresión facial con toxina botulínica para suavizar arrugas sin perder naturalidad.<span class="inner-price">250 €</span></div></div></div>
 
-        <div class="item">
-          <button><div>Toxina 3 zonas 50ui <small>20 min</small></div><span>+</span></button>
-          <div class="content"><div class="inner">Protocolo completo de rejuvenecimiento facial en frente, entrecejo y patas de gallo. Utilizamos toxina botulínica de alta precisión.<span class="inner-price">320 €</span></div></div>
-        </div>
+        <div class="item"><button><div>Toxina 3 zonas 50ui <small>20 min</small></div><span>+</span></button><div class="content"><div class="inner">Protocolo completo de rejuvenecimiento facial en frente, entrecejo y patas de gallo.<span class="inner-price">320 €</span></div></div></div>
 
-        <div class="item">
-          <button><div>Bruxismo 50u <small>20 min</small></div><span>+</span></button>
-          <div class="content"><div class="inner">Infiltración en músculos maseteros para tratar el bruxismo, aliviar tensión mandibular y afinar el rostro progresivamente.<span class="inner-price">350 €</span></div></div>
-        </div>
+        <div class="item"><button><div>Bruxismo 50u <small>20 min</small></div><span>+</span></button><div class="content"><div class="inner">Infiltración en maseteros para tratar el bruxismo, aliviar tensión mandibular y afinar el rostro.<span class="inner-price">350 €</span></div></div></div>
 
-        <div class="item">
-          <button><div>Bruxismo 70u <small>20 min</small></div><span>+</span></button>
-          <div class="content"><div class="inner">Tratamiento avanzado para bruxismo mediante infiltración de toxina en maseteros. Mejora el descanso, la tensión mandibular y la armonía facial.<span class="inner-price">400 €</span></div></div>
-        </div>
+        <div class="item"><button><div>Bruxismo 70u <small>20 min</small></div><span>+</span></button><div class="content"><div class="inner">Tratamiento avanzado para bruxismo mediante infiltración de toxina en músculos maseteros.<span class="inner-price">400 €</span></div></div></div>
 
-        <div class="item">
-          <button><div>Mentón empedrado <small>20 min</small></div><span>+</span></button>
-          <div class="content"><div class="inner">Microdosis de toxina para suavizar la textura irregular del mentón y armonizar el perfil inferior del rostro.<span class="inner-price">150 €</span></div></div>
-        </div>
+        <div class="item"><button><div>Mentón empedrado <small>20 min</small></div><span>+</span></button><div class="content"><div class="inner">Microdosis de toxina para suavizar la textura irregular del mentón.<span class="inner-price">150 €</span></div></div></div>
 
-        <div class="item">
-          <button><div>Toxina DAO <small>20 min</small></div><span>+</span></button>
-          <div class="content"><div class="inner">Relajación del músculo DAO para elevar comisuras y suavizar la expresión triste. Sutil y muy eficaz en armonización facial.<span class="inner-price">150 €</span></div></div>
-        </div>
+        <div class="item"><button><div>Toxina DAO <small>20 min</small></div><span>+</span></button><div class="content"><div class="inner">Relajación del músculo DAO para elevar comisuras y suavizar la expresión triste.<span class="inner-price">150 €</span></div></div></div>
 
       </div>
     </div>
@@ -802,20 +902,11 @@ footer{
       <h3 class="group-title">Labios</h3>
       <div class="accordion">
 
-        <div class="item">
-          <button><div>Aumento de labios 1ml <small>30 min</small></div><span>+</span></button>
-          <div class="content"><div class="inner">Aumento de volumen y definición de labios con 1 ml de ácido hialurónico. Ideal para realzar la forma natural, corregir asimetrías o conseguir labios más jugosos.<span class="inner-price">300 €</span></div></div>
-        </div>
+        <div class="item"><button><div>Aumento de labios 1ml <small>30 min</small></div><span>+</span></button><div class="content"><div class="inner">Aumento de volumen y definición con 1 ml de ácido hialurónico de alta calidad.<span class="inner-price">300 €</span></div></div></div>
 
-        <div class="item">
-          <button><div>Hidratación de labios <small>30 min</small></div><span>+</span></button>
-          <div class="content"><div class="inner">Tratamiento con 0,5 ml de ácido hialurónico específico para hidratar profundamente los labios sin aportar volumen excesivo.<span class="inner-price">250 €</span></div></div>
-        </div>
+        <div class="item"><button><div>Hidratación de labios <small>30 min</small></div><span>+</span></button><div class="content"><div class="inner">Tratamiento con 0,5 ml de ácido hialurónico específico para hidratar profundamente sin aportar volumen excesivo.<span class="inner-price">250 €</span></div></div></div>
 
-        <div class="item">
-          <button><div>Retirada ácido hialurónico <small>30 min</small></div><span>+</span></button>
-          <div class="content"><div class="inner">Eliminación segura y controlada de ácido hialurónico mediante hialuronidasa. Indicado en sobrecorrección, migración o resultados no deseados.<span class="inner-price">200 €</span></div></div>
-        </div>
+        <div class="item"><button><div>Retirada ácido hialurónico <small>30 min</small></div><span>+</span></button><div class="content"><div class="inner">Eliminación segura y controlada de ácido hialurónico mediante hialuronidasa.<span class="inner-price">200 €</span></div></div></div>
 
       </div>
     </div>
@@ -824,55 +915,25 @@ footer{
       <h3 class="group-title">Rellenos faciales</h3>
       <div class="accordion">
 
-        <div class="item">
-          <button><div>Rinomodelación <small>30 min</small></div><span>+</span></button>
-          <div class="content"><div class="inner">Armonización nasal sin cirugía mediante ácido hialurónico para mejorar perfil, ángulos y equilibrio facial.<span class="inner-price">350 €</span></div></div>
-        </div>
+        <div class="item"><button><div>Rinomodelación <small>30 min</small></div><span>+</span></button><div class="content"><div class="inner">Armonización nasal sin cirugía mediante ácido hialurónico.<span class="inner-price">350 €</span></div></div></div>
 
-        <div class="item">
-          <button><div>Pómulo 1 vial <small>30 min</small></div><span>+</span></button>
-          <div class="content"><div class="inner">Proyección y definición de pómulo con ácido hialurónico para aportar estructura y frescura al rostro.<span class="inner-price">350 €</span></div></div>
-        </div>
+        <div class="item"><button><div>Pómulo 1 vial <small>30 min</small></div><span>+</span></button><div class="content"><div class="inner">Proyección y definición de pómulo con ácido hialurónico.<span class="inner-price">350 €</span></div></div></div>
 
-        <div class="item">
-          <button><div>Pómulo 2 viales <small>30 min</small></div><span>+</span></button>
-          <div class="content"><div class="inner">Tratamiento de mayor proyección para realzar pómulos y mejorar la armonía del tercio medio facial.<span class="inner-price">600 €</span></div></div>
-        </div>
+        <div class="item"><button><div>Pómulo 2 viales <small>30 min</small></div><span>+</span></button><div class="content"><div class="inner">Tratamiento de mayor proyección para realzar pómulos y tercio medio facial.<span class="inner-price">600 €</span></div></div></div>
 
-        <div class="item">
-          <button><div>Surco nasogeniano <small>30 min</small></div><span>+</span></button>
-          <div class="content"><div class="inner">Tratamiento del surco nasogeniano con 1 ml de ácido hialurónico para suavizar pliegues y rejuvenecer la expresión.<span class="inner-price">350 €</span></div></div>
-        </div>
+        <div class="item"><button><div>Surco nasogeniano <small>30 min</small></div><span>+</span></button><div class="content"><div class="inner">Tratamiento del surco nasogeniano con 1 ml de ácido hialurónico.<span class="inner-price">350 €</span></div></div></div>
 
-        <div class="item">
-          <button><div>Mentón <small>30 min</small></div><span>+</span></button>
-          <div class="content"><div class="inner">Armonización del mentón con ácido hialurónico para mejorar el perfil y equilibrar proporciones faciales.<span class="inner-price">300 €</span></div></div>
-        </div>
+        <div class="item"><button><div>Mentón <small>30 min</small></div><span>+</span></button><div class="content"><div class="inner">Armonización del mentón para mejorar perfil y proporciones faciales.<span class="inner-price">300 €</span></div></div></div>
 
-        <div class="item">
-          <button><div>Marcación 1 vial <small>30 min</small></div><span>+</span></button>
-          <div class="content"><div class="inner">Marcación mandibular o facial con 1 vial para definir contornos de forma elegante y natural.<span class="inner-price">350 €</span></div></div>
-        </div>
+        <div class="item"><button><div>Marcación 1 vial <small>30 min</small></div><span>+</span></button><div class="content"><div class="inner">Marcación facial con 1 vial para definir contornos de forma elegante.<span class="inner-price">350 €</span></div></div></div>
 
-        <div class="item">
-          <button><div>Marcación 2 viales <small>30 min</small></div><span>+</span></button>
-          <div class="content"><div class="inner">Definición facial más completa mediante 2 viales de ácido hialurónico.<span class="inner-price">600 €</span></div></div>
-        </div>
+        <div class="item"><button><div>Marcación 2 viales <small>30 min</small></div><span>+</span></button><div class="content"><div class="inner">Definición facial más completa mediante 2 viales de ácido hialurónico.<span class="inner-price">600 €</span></div></div></div>
 
-        <div class="item">
-          <button><div>Marcación 2 viales + mentón <small>45 min</small></div><span>+</span></button>
-          <div class="content"><div class="inner">Protocolo combinado para definir mandíbula y equilibrar mentón, mejorando el perfil facial.<span class="inner-price">850 €</span></div></div>
-        </div>
+        <div class="item"><button><div>Marcación 2 viales + mentón <small>45 min</small></div><span>+</span></button><div class="content"><div class="inner">Protocolo combinado para definir mandíbula y equilibrar mentón.<span class="inner-price">850 €</span></div></div></div>
 
-        <div class="item">
-          <button><div>Fosa temporal 1ml <small>30 min</small></div><span>+</span></button>
-          <div class="content"><div class="inner">Tratamiento para restaurar volumen en la zona temporal y mejorar la apariencia de cansancio o hundimiento.<span class="inner-price">350 €</span></div></div>
-        </div>
+        <div class="item"><button><div>Fosa temporal 1ml <small>30 min</small></div><span>+</span></button><div class="content"><div class="inner">Tratamiento para restaurar volumen en la zona temporal.<span class="inner-price">350 €</span></div></div></div>
 
-        <div class="item">
-          <button><div>Fosa temporal 2ml <small>30 min</small></div><span>+</span></button>
-          <div class="content"><div class="inner">Corrección más completa de la zona temporal con 2 ml de ácido hialurónico.<span class="inner-price">650 €</span></div></div>
-        </div>
+        <div class="item"><button><div>Fosa temporal 2ml <small>30 min</small></div><span>+</span></button><div class="content"><div class="inner">Corrección más completa de la zona temporal con 2 ml de ácido hialurónico.<span class="inner-price">650 €</span></div></div></div>
 
       </div>
     </div>
@@ -881,40 +942,19 @@ footer{
       <h3 class="group-title">Ojera</h3>
       <div class="accordion">
 
-        <div class="item">
-          <button><div>Relleno de ojeras 1ml <small>30 min</small></div><span>+</span></button>
-          <div class="content"><div class="inner">Tratamiento con ácido hialurónico para mejorar el hundimiento de la ojera y aportar una mirada más descansada.<span class="inner-price">350 €</span></div></div>
-        </div>
+        <div class="item"><button><div>Relleno de ojeras 1ml <small>30 min</small></div><span>+</span></button><div class="content"><div class="inner">Mejora del hundimiento de la ojera para una mirada más descansada.<span class="inner-price">350 €</span></div></div></div>
 
-        <div class="item">
-          <button><div>Ojera + pómulo 1ml <small>30 min</small></div><span>+</span></button>
-          <div class="content"><div class="inner">Tratamiento combinado para mejorar la ojera y reforzar el soporte del tercio medio facial.<span class="inner-price">650 €</span></div></div>
-        </div>
+        <div class="item"><button><div>Ojera + pómulo 1ml <small>30 min</small></div><span>+</span></button><div class="content"><div class="inner">Tratamiento combinado para mejorar ojera y soporte del tercio medio.<span class="inner-price">650 €</span></div></div></div>
 
-        <div class="item">
-          <button><div>Ojera + pómulo 2ml <small>40 min</small></div><span>+</span></button>
-          <div class="content"><div class="inner">Protocolo avanzado para mejorar mirada, soporte y armonía del tercio medio.<span class="inner-price">900 €</span></div></div>
-        </div>
+        <div class="item"><button><div>Ojera + pómulo 2ml <small>40 min</small></div><span>+</span></button><div class="content"><div class="inner">Protocolo avanzado para mejorar mirada, soporte y armonía facial.<span class="inner-price">900 €</span></div></div></div>
 
-        <div class="item">
-          <button><div>Polinucleótidos periocular <small>30 min</small></div><span>+</span></button>
-          <div class="content"><div class="inner">Estimulan la reparación celular y promueven la síntesis de ácido hialurónico, colágeno y elastina para rejuvenecer la zona periocular.<span class="inner-price">270 €</span></div></div>
-        </div>
+        <div class="item"><button><div>Polinucleótidos periocular <small>30 min</small></div><span>+</span></button><div class="content"><div class="inner">Estimulan la reparación celular y ayudan a rejuvenecer la zona periocular.<span class="inner-price">270 €</span></div></div></div>
 
-        <div class="item">
-          <button><div>Polinucleótidos periocular pack 3 sesiones <small>30 min</small></div><span>+</span></button>
-          <div class="content"><div class="inner">Pack de 3 sesiones para mejorar de forma progresiva la calidad de la piel periocular.<span class="inner-price">750 €</span></div></div>
-        </div>
+        <div class="item"><button><div>Polinucleótidos periocular pack 3 sesiones <small>30 min</small></div><span>+</span></button><div class="content"><div class="inner">Pack de 3 sesiones para mejorar progresivamente la calidad de la piel periocular.<span class="inner-price">750 €</span></div></div></div>
 
-        <div class="item">
-          <button><div>Vital Eyes NTCF 135 <small>20 min</small></div><span>+</span></button>
-          <div class="content"><div class="inner">Tratamiento multivitamínico e hidratante para restaurar luminosidad y calidad de la piel en la zona de la ojera.<span class="inner-price">150 €</span></div></div>
-        </div>
+        <div class="item"><button><div>Vital Eyes NTCF 135 <small>20 min</small></div><span>+</span></button><div class="content"><div class="inner">Tratamiento multivitamínico e hidratante para restaurar luminosidad en la zona de la ojera.<span class="inner-price">150 €</span></div></div></div>
 
-        <div class="item">
-          <button><div>Vital Eyes NTCF 135 Pack 3 sesiones <small>20 min</small></div><span>+</span></button>
-          <div class="content"><div class="inner">Pack de 3 sesiones para mejorar progresivamente la luminosidad y textura de la zona periocular.<span class="inner-price">425 €</span></div></div>
-        </div>
+        <div class="item"><button><div>Vital Eyes NTCF 135 Pack 3 sesiones <small>20 min</small></div><span>+</span></button><div class="content"><div class="inner">Pack de 3 sesiones para mejorar luminosidad y textura periocular.<span class="inner-price">425 €</span></div></div></div>
 
       </div>
     </div>
@@ -923,55 +963,25 @@ footer{
       <h3 class="group-title">Calidad de piel</h3>
       <div class="accordion">
 
-        <div class="item">
-          <button><div>Inductor de colágeno <small>Sculptra o Aesthefill · 30 min</small></div><span>+</span></button>
-          <div class="content"><div class="inner">Tratamiento para combatir la flacidez sin dar volumen y devolver firmeza a la piel.<span class="inner-price">400 €</span></div></div>
-        </div>
+        <div class="item"><button><div>Inductor de colágeno <small>Sculptra o Aesthefill · 30 min</small></div><span>+</span></button><div class="content"><div class="inner">Tratamiento para combatir flacidez sin dar volumen y devolver firmeza.<span class="inner-price">400 €</span></div></div></div>
 
-        <div class="item">
-          <button><div>Polinucleótidos <small>30 min</small></div><span>+</span></button>
-          <div class="content"><div class="inner">Estimulan la reparación celular y promueven la síntesis de sustancias esenciales como ácido hialurónico, colágeno y elastina.<span class="inner-price">270 €</span></div></div>
-        </div>
+        <div class="item"><button><div>Polinucleótidos <small>30 min</small></div><span>+</span></button><div class="content"><div class="inner">Estimulan reparación celular y promueven síntesis de ácido hialurónico, colágeno y elastina.<span class="inner-price">270 €</span></div></div></div>
 
-        <div class="item">
-          <button><div>Polinucleótidos pack 3 sesiones <small>30 min</small></div><span>+</span></button>
-          <div class="content"><div class="inner">Pack de 3 sesiones para mejorar de forma progresiva hidratación, firmeza y calidad cutánea.<span class="inner-price">750 €</span></div></div>
-        </div>
+        <div class="item"><button><div>Polinucleótidos pack 3 sesiones <small>30 min</small></div><span>+</span></button><div class="content"><div class="inner">Pack de 3 sesiones para mejorar hidratación, firmeza y calidad cutánea.<span class="inner-price">750 €</span></div></div></div>
 
-        <div class="item">
-          <button><div>Mesoterapia NCTF 135AH <small>30 min</small></div><span>+</span></button>
-          <div class="content"><div class="inner">Producto de mesoterapia antiedad compuesto por múltiples ingredientes activos para revitalización integral e hidratación profunda.<span class="inner-price">175 €</span></div></div>
-        </div>
+        <div class="item"><button><div>Mesoterapia NCTF 135AH <small>30 min</small></div><span>+</span></button><div class="content"><div class="inner">Mesoterapia antiedad para revitalización integral e hidratación profunda.<span class="inner-price">175 €</span></div></div></div>
 
-        <div class="item">
-          <button><div>Mesoterapia NCTF 135AH Pack 3 sesiones <small>30 min</small></div><span>+</span></button>
-          <div class="content"><div class="inner">Pack de 3 sesiones para potenciar luminosidad, hidratación y textura de la piel.<span class="inner-price">495 €</span></div></div>
-        </div>
+        <div class="item"><button><div>Mesoterapia NCTF 135AH Pack 3 sesiones <small>30 min</small></div><span>+</span></button><div class="content"><div class="inner">Pack para potenciar luminosidad, hidratación y textura de la piel.<span class="inner-price">495 €</span></div></div></div>
 
-        <div class="item">
-          <button><div>Microneedling Dermapen <small>30 min</small></div><span>+</span></button>
-          <div class="content"><div class="inner">Tratamiento para minimizar signos de envejecimiento y mejorar la textura cutánea, dejando el rostro más radiante.<span class="inner-price">90 €</span></div></div>
-        </div>
+        <div class="item"><button><div>Microneedling Dermapen <small>30 min</small></div><span>+</span></button><div class="content"><div class="inner">Mejora textura cutánea y signos de envejecimiento.<span class="inner-price">90 €</span></div></div></div>
 
-        <div class="item">
-          <button><div>Peeling superficial BioRePeel <small>30 min</small></div><span>+</span></button>
-          <div class="content"><div class="inner">Peeling superficial para renovar la piel, mejorar textura, luminosidad y aspecto general.<span class="inner-price">90 €</span></div></div>
-        </div>
+        <div class="item"><button><div>Peeling superficial BioRePeel <small>30 min</small></div><span>+</span></button><div class="content"><div class="inner">Peeling superficial para renovar piel, textura y luminosidad.<span class="inner-price">90 €</span></div></div></div>
 
-        <div class="item">
-          <button><div>Mesoterapia vitaminas <small>30 min</small></div><span>+</span></button>
-          <div class="content"><div class="inner">Tratamiento que nutre la piel desde el interior, mejorando luminosidad y suavidad.<span class="inner-price">150 €</span></div></div>
-        </div>
+        <div class="item"><button><div>Mesoterapia vitaminas <small>30 min</small></div><span>+</span></button><div class="content"><div class="inner">Tratamiento que nutre la piel desde el interior, mejorando luminosidad y suavidad.<span class="inner-price">150 €</span></div></div></div>
 
-        <div class="item">
-          <button><div>Mesotox <small>30 min</small></div><span>+</span></button>
-          <div class="content"><div class="inner">Mesoterapia facial con complejo vitamínico y toxina para aportar luminosidad y mejorar textura.<span class="inner-price">250 €</span></div></div>
-        </div>
+        <div class="item"><button><div>Mesotox <small>30 min</small></div><span>+</span></button><div class="content"><div class="inner">Mesoterapia facial con complejo vitamínico y toxina para aportar luminosidad.<span class="inner-price">250 €</span></div></div></div>
 
-        <div class="item">
-          <button><div>Skinbooster <small>30 min</small></div><span>+</span></button>
-          <div class="content"><div class="inner">Hidratación profunda y mejora de la calidad de la piel.<span class="inner-price">250 €</span></div></div>
-        </div>
+        <div class="item"><button><div>Skinbooster <small>30 min</small></div><span>+</span></button><div class="content"><div class="inner">Hidratación profunda y mejora de la calidad de la piel.<span class="inner-price">250 €</span></div></div></div>
 
       </div>
     </div>
@@ -980,20 +990,11 @@ footer{
       <h3 class="group-title">Plexr</h3>
       <div class="accordion">
 
-        <div class="item">
-          <button><div>Xantelasmas <small>30 min</small></div><span>+</span></button>
-          <div class="content"><div class="inner">Eliminación de xantelasmas perioculares con láser Plexr.<span class="inner-price">300 €</span></div></div>
-        </div>
+        <div class="item"><button><div>Xantelasmas <small>30 min</small></div><span>+</span></button><div class="content"><div class="inner">Eliminación de xantelasmas perioculares con láser Plexr.<span class="inner-price">300 €</span></div></div></div>
 
-        <div class="item">
-          <button><div>Rejuvenecimiento periocular completo <small>1 h</small></div><span>+</span></button>
-          <div class="content"><div class="inner">Rejuvenecimiento de párpado superior e inferior con tecnología plasma Plexr.<span class="inner-price">700 €</span></div></div>
-        </div>
+        <div class="item"><button><div>Rejuvenecimiento periocular completo <small>1 h</small></div><span>+</span></button><div class="content"><div class="inner">Rejuvenecimiento de párpado superior e inferior con tecnología plasma Plexr.<span class="inner-price">700 €</span></div></div></div>
 
-        <div class="item">
-          <button><div>Eliminación lesión benigna <small>20 min</small></div><span>+</span></button>
-          <div class="content"><div class="inner">Eliminación de lesiones benignas, fibromas, queratosis seborreicas o quistes sebáceos con dispositivo láser Plexr.<span class="inner-price">60 €</span></div></div>
-        </div>
+        <div class="item"><button><div>Eliminación lesión benigna <small>20 min</small></div><span>+</span></button><div class="content"><div class="inner">Eliminación de lesiones benignas, fibromas, queratosis o quistes sebáceos.<span class="inner-price">60 €</span></div></div></div>
 
       </div>
     </div>
@@ -1002,15 +1003,9 @@ footer{
       <h3 class="group-title">Cosmética</h3>
       <div class="accordion">
 
-        <div class="item">
-          <button><div>CORALIP bálsamo labial hidratante y antiarrugas <small>5 min</small></div><span>+</span></button>
-          <div class="content"><div class="inner">Bálsamo nutritivo que actúa como mascarilla nocturna para labios y zonas peribucales. Ayuda a suavizar líneas finas, mejorar definición y revitalizar la forma natural del labio.<span class="inner-price">16,50 €</span></div></div>
-        </div>
+        <div class="item"><button><div>CORALIP bálsamo labial hidratante y antiarrugas <small>5 min</small></div><span>+</span></button><div class="content"><div class="inner">Bálsamo nutritivo para labios y zonas peribucales. Ayuda a suavizar líneas finas y revitalizar el labio.<span class="inner-price">16,50 €</span></div></div></div>
 
-        <div class="item">
-          <button><div>Spark + Vit K 50ml <small>5 min</small></div><span>+</span></button>
-          <div class="content"><div class="inner">Crema localizada con vitamina K y centella asiática que ayuda a restaurar la piel después de tratamientos estéticos como rellenos, mesoterapia, láser o intervenciones.<span class="inner-price">39 €</span></div></div>
-        </div>
+        <div class="item"><button><div>Spark + Vit K 50ml <small>5 min</small></div><span>+</span></button><div class="content"><div class="inner">Crema localizada con vitamina K y centella asiática para después de tratamientos estéticos.<span class="inner-price">39 €</span></div></div></div>
 
       </div>
     </div>
@@ -1019,25 +1014,13 @@ footer{
       <h3 class="group-title">Packs</h3>
       <div class="accordion">
 
-        <div class="item">
-          <button><div>Fullface 4ml <small>1 h</small></div><span>+</span></button>
-          <div class="content"><div class="inner">Armonización facial con 4 ml de ácido hialurónico. Excluido tratamiento de ojeras.<span class="inner-price">1050 €</span></div></div>
-        </div>
+        <div class="item"><button><div>Fullface 4ml <small>1 h</small></div><span>+</span></button><div class="content"><div class="inner">Armonización facial con 4 ml de ácido hialurónico. Excluido tratamiento de ojeras.<span class="inner-price">1050 €</span></div></div></div>
 
-        <div class="item">
-          <button><div>Fullface 4ml + ojera <small>1 h</small></div><span>+</span></button>
-          <div class="content"><div class="inner">Armonización facial con 4 ml de ácido hialurónico y relleno de ojeras con 1 ml.<span class="inner-price">1350 €</span></div></div>
-        </div>
+        <div class="item"><button><div>Fullface 4ml + ojera <small>1 h</small></div><span>+</span></button><div class="content"><div class="inner">Armonización facial con 4 ml de ácido hialurónico y relleno de ojeras con 1 ml.<span class="inner-price">1350 €</span></div></div></div>
 
-        <div class="item">
-          <button><div>Fullface 5ml <small>1 h</small></div><span>+</span></button>
-          <div class="content"><div class="inner">Armonización facial con 5 ml de ácido hialurónico. Excluido tratamiento de ojeras.<span class="inner-price">1300 €</span></div></div>
-        </div>
+        <div class="item"><button><div>Fullface 5ml <small>1 h</small></div><span>+</span></button><div class="content"><div class="inner">Armonización facial con 5 ml de ácido hialurónico. Excluido tratamiento de ojeras.<span class="inner-price">1300 €</span></div></div></div>
 
-        <div class="item">
-          <button><div>Fullface 5ml + ojera <small>1 h 15 min</small></div><span>+</span></button>
-          <div class="content"><div class="inner">Armonización facial completa con 5 ml de ácido hialurónico y tratamiento de ojera.<span class="inner-price">1650 €</span></div></div>
-        </div>
+        <div class="item"><button><div>Fullface 5ml + ojera <small>1 h 15 min</small></div><span>+</span></button><div class="content"><div class="inner">Armonización facial completa con 5 ml de ácido hialurónico y tratamiento de ojera.<span class="inner-price">1650 €</span></div></div></div>
 
       </div>
     </div>
@@ -1046,24 +1029,25 @@ footer{
 </section>
 
 <section id="ubicacion" class="section">
-  <div class="section-title reveal">
+  <div class="section-title">
     <span class="tag">Ubicación y horario</span>
-    <h2>Consulta en Lumina Clinic.</h2>
+    <h2>Consulta en Madrid.</h2>
   </div>
 
   <div class="location-grid">
-    <div class="location-card reveal">
+    <div class="location-card">
       <h3>Dirección</h3>
-      <p style="margin-top:14px;line-height:1.7;color:#555;">
+      <p>
         Calle Conde de Peñalver 61,<br>
-        Lumina Clinic, Salamanca,<br>
-        Madrid, Comunidad de Madrid.
+        Salamanca, Madrid,<br>
+        Comunidad de Madrid<br>
+        <strong>(Lumina Clinic)</strong>
       </p>
       <br>
       <a href="https://wa.me/34680230921" target="_blank" class="btn">Reservar por WhatsApp</a>
     </div>
 
-    <div class="location-card reveal">
+    <div class="location-card">
       <h3>Horario</h3>
       <div class="schedule">
         <div><span>Lunes</span><strong>10:00 - 20:00</strong></div>
@@ -1078,16 +1062,14 @@ footer{
   </div>
 </section>
 
-<section id="contacto" class="contact reveal">
+<section id="contacto" class="contact">
   <span class="tag">Reserva tu cita</span>
-  <h2>Habla directamente con la clínica.</h2>
+  <h2>Empieza con una valoración médica.</h2>
   <p>
-    Contacta por WhatsApp para solicitar valoración, resolver dudas o reservar tu tratamiento con la Dra. Miriam Chinchón.
+    Contacta por WhatsApp para solicitar información, resolver dudas o reservar tu tratamiento con la Dra. Miriam Chinchón.
   </p>
 
-  <a href="https://wa.me/34680230921" target="_blank" class="btn" style="background:white;color:black;border-color:white;">
-    Reservar ahora
-  </a>
+  <a href="https://wa.me/34680230921" target="_blank" class="btn light">Reservar ahora</a>
 </section>
 
 <footer>
@@ -1096,18 +1078,6 @@ footer{
 </footer>
 
 <script>
-const reveals=document.querySelectorAll(".reveal");
-
-const revealObserver=new IntersectionObserver(entries=>{
-  entries.forEach(entry=>{
-    if(entry.isIntersecting){
-      entry.target.classList.add("active");
-    }
-  });
-},{threshold:.12});
-
-reveals.forEach(el=>revealObserver.observe(el));
-
 const items=document.querySelectorAll(".item");
 
 items.forEach(item=>{
@@ -1150,10 +1120,10 @@ window.addEventListener("scroll",()=>{
   const nav=document.querySelector(".nav");
 
   if(window.scrollY>80){
-    nav.style.background="rgba(244,238,230,.98)";
+    nav.style.background="rgba(247,242,234,.98)";
     nav.style.boxShadow="0 12px 34px rgba(0,0,0,.08)";
   }else{
-    nav.style.background="rgba(244,238,230,.94)";
+    nav.style.background="rgba(247,242,234,.86)";
     nav.style.boxShadow="none";
   }
 });
