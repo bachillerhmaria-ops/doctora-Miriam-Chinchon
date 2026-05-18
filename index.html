@@ -13,7 +13,8 @@
   --cream:#f8f5ef;
   --text:#171717;
   --muted:#756f66;
-  --gold:#b7a085;
+  --amber:#c47a3d;
+  --gold:#c47a3d;
   --line:#d8d0c5;
   --dark:#161616;
   --white:#fff;
@@ -73,7 +74,7 @@ nav{
 }
 
 .nav-btn{
-  background:var(--dark);
+  background:var(--amber);
   color:white;
   padding:11px 20px;
   border-radius:999px;
@@ -92,15 +93,19 @@ nav{
   padding:130px 0 70px;
 }
 
+.hero .container{
+  width:min(1280px,96%);
+}
+
 .hero::before{
   content:"";
   position:absolute;
   inset:0;
   background:
-    linear-gradient(90deg, rgba(238,233,225,.96) 0%, rgba(238,233,225,.82) 38%, rgba(238,233,225,.42) 100%),
+    linear-gradient(90deg, rgba(238,233,225,.98) 0%, rgba(238,233,225,.80) 34%, rgba(238,233,225,.30) 100%),
     url("letrero_muses.png");
   background-size:cover;
-  background-position:center;
+  background-position:65% center;
   transform:scale(1.02);
 }
 
@@ -116,6 +121,7 @@ nav{
   position:relative;
   z-index:2;
   max-width:760px;
+  margin-left:0;
 }
 
 .kicker{
@@ -134,7 +140,7 @@ nav{
   content:"";
   width:42px;
   height:1px;
-  background:var(--gold);
+  background:var(--amber);
 }
 
 .hero h1{
@@ -173,10 +179,12 @@ nav{
   border-radius:999px;
   font-weight:700;
   transition:.3s ease;
+  border:none;
+  cursor:pointer;
 }
 
 .btn-dark{
-  background:var(--dark);
+  background:var(--amber);
   color:white;
 }
 
@@ -189,7 +197,7 @@ nav{
   transform:translateY(-3px);
 }
 
-/* INTRO */
+/* SECTIONS */
 
 .section{
   padding:105px 0;
@@ -201,7 +209,7 @@ nav{
 
 .label{
   text-transform:uppercase;
-  color:var(--gold);
+  color:var(--amber);
   letter-spacing:.14em;
   font-size:.78rem;
   font-weight:800;
@@ -284,6 +292,7 @@ nav{
 .price{
   font-size:1.35rem;
   font-weight:800;
+  color:var(--amber);
 }
 
 /* MINI SERVICES */
@@ -357,11 +366,11 @@ nav{
 }
 
 .academy-card ul{
-  margin-top:20px;
+  margin:20px 0 26px;
   padding-left:18px;
 }
 
-/* CTA */
+/* FORM */
 
 .cta{
   text-align:center;
@@ -387,6 +396,47 @@ nav{
   max-width:680px;
   line-height:1.8;
   margin:0 auto 34px;
+}
+
+.reserve-form{
+  max-width:850px;
+  margin:35px auto 0;
+}
+
+.form-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+  margin-bottom:14px;
+}
+
+.reserve-form input,
+.reserve-form select,
+.reserve-form textarea{
+  width:100%;
+  border:1px solid var(--line);
+  background:var(--cream);
+  border-radius:18px;
+  padding:17px 18px;
+  font-family:'Inter',sans-serif;
+  font-size:.95rem;
+  outline:none;
+}
+
+.reserve-form textarea{
+  min-height:140px;
+  resize:vertical;
+  margin-bottom:20px;
+}
+
+.reserve-form input:focus,
+.reserve-form select:focus,
+.reserve-form textarea:focus{
+  border-color:var(--amber);
+}
+
+.reserve-form button{
+  min-width:220px;
 }
 
 /* FOOTER */
@@ -436,10 +486,10 @@ footer{
 
   .hero::before{
     background:
-      linear-gradient(to bottom, rgba(238,233,225,.42) 0%, rgba(238,233,225,.68) 42%, rgba(238,233,225,.98) 82%),
+      linear-gradient(to bottom, rgba(238,233,225,.35) 0%, rgba(238,233,225,.70) 44%, rgba(238,233,225,.98) 84%),
       url("letrero_muses.png");
     background-size:cover;
-    background-position:center top;
+    background-position:70% top;
   }
 
   .hero-content{
@@ -474,7 +524,8 @@ footer{
 
   .services,
   .academy-grid,
-  .mini-grid{
+  .mini-grid,
+  .form-grid{
     grid-template-columns:1fr;
   }
 
@@ -544,10 +595,10 @@ footer{
   <div class="nav-links">
     <a href="#servicios">SERVICIOS</a>
     <a href="#academy">FORMACIÓN</a>
-    <a href="#contacto">CONTACTO</a>
+    <a href="#reserva">RESERVA</a>
   </div>
 
-  <a class="nav-btn" href="https://wa.me/34675875546" target="_blank">RESERVAR</a>
+  <a class="nav-btn" href="#reserva">RESERVAR</a>
 </nav>
 
 <header class="hero">
@@ -662,6 +713,7 @@ footer{
             <li>Colorimetría y pigmentos</li>
             <li>Protocolo profesional de trabajo</li>
           </ul>
+          <a href="#reserva" class="btn btn-light">Reserva ya tu plaza</a>
         </div>
 
         <div class="academy-card">
@@ -673,22 +725,44 @@ footer{
             <li>Demostración técnica</li>
             <li>Orientación para captar clientas</li>
           </ul>
+          <a href="#reserva" class="btn btn-light">Reserva ya tu plaza</a>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section cta" id="contacto">
+<section class="section cta" id="reserva">
   <div class="container">
     <div class="cta-box">
-      <h2>Reserva tu asesoría.</h2>
+      <h2>Reserva tu cita.</h2>
       <p>
-        Cuéntanos tu caso y te recomendaremos el tratamiento o formación más adecuada para ti.
+        Déjanos tus datos y cuéntanos qué tratamiento o formación te interesa.
       </p>
-      <a href="https://wa.me/34675875546" target="_blank" class="btn btn-dark">
-        Hablar por WhatsApp →
-      </a>
+
+      <form action="https://formspree.io/f/tu-id" method="POST" class="reserve-form">
+        <div class="form-grid">
+          <input type="text" name="nombre" placeholder="Nombre completo" required>
+          <input type="tel" name="telefono" placeholder="Teléfono / WhatsApp" required>
+          <input type="email" name="email" placeholder="Email">
+          <select name="servicio" required>
+            <option value="">Selecciona servicio</option>
+            <option>Micropigmentación de cejas</option>
+            <option>Neutralización de ojeras</option>
+            <option>Labios</option>
+            <option>Lifting de pestañas</option>
+            <option>Laminado de cejas</option>
+            <option>Formación / Masterclass</option>
+            <option>Workshop intensivo</option>
+          </select>
+        </div>
+
+        <textarea name="mensaje" placeholder="Cuéntanos brevemente tu caso o disponibilidad"></textarea>
+
+        <button type="submit" class="btn btn-dark">
+          Enviar solicitud →
+        </button>
+      </form>
     </div>
   </div>
 </section>
